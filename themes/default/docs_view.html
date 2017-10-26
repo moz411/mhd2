@@ -1,0 +1,27 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<div id="centre">
+<table class="tickets">
+	<tr>
+		<td>[[name]]
+		<td>[[type]]
+		<td>[[creation date]]
+		<td>[[last modified]]
+		<td>[[size]]
+	</tr>
+	
+	<TMPL_LOOP listing>
+	<tr onmouseover="javascript:style.background='#CCCCCC'"
+    onmouseout="javascript:style.background='#f4f4f4'"
+    onmousedown="javascript:OpenNew('index.php?whattodo=showdoc&file=<TMPL_VAR href>')">
+		<td><TMPL_VAR name>
+		<td><TMPL_VAR getcontenttype>
+		<td><TMPL_VAR creationdate>
+		<td><TMPL_VAR lastmodified>
+		<td><TMPL_VAR getcontentlength>
+	</tr>
+	</TMPL_LOOP>
+</table>
+</div>
+
+<TMPL_INCLUDE NAME="footer.html">

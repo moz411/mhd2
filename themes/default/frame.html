@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+<head><title><TMPL_VAR title></title></head>
+<TMPL_IF link>
+<frameset rows="60, *" noresize border="0">
+<frame src="<TMPL_VAR theme_url>/frametop.html" name="top_frame" scrolling="no">
+<frame src="<TMPL_VAR link>" name="bottom_frame">
+<TMPL_ELSE>
+<TMPL_TEXTAREA data>
+</TMPL_IF>
+</html>

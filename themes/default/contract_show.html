@@ -1,0 +1,210 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form name="addcontract" method="post" action="index.php?whattodo=addcontract">
+<table class="tickets">
+	<th colspan="2"><TMPL_VAR title>
+	<TMPL_LOOP contract>
+		<tr><td>[[customer]]<td><a href="index.php?whattodo=viewcustomers&cid=<TMPL_VAR cid>"><TMPL_VAR customer></A
+		<tr><td>[[number]]<td><TMPL_VAR number>
+		<tr><td>[[start date]]<td><TMPL_DATE start_date>
+		<tr><td>[[delivery address]]<td><TMPL_VAR delivery_address>
+		<tr><td>[[facturation]]<td><TMPL_VAR facturation>
+		<tr><td>[[payment]]<td><TMPL_VAR payment>
+		<tr><td>[[comments]]<td><TMPL_TEXTAREA comments>
+		<tr><td>[[partner software]]<td><TMPL_TEXTAREA partner_soft>
+		<tr><td>[[partner software contract]]<td><TMPL_TEXTAREA partner_soft_contract>
+		<tr><td>[[partner hardware]]<td><TMPL_TEXTAREA partner_hard>
+		<tr><td>[[partner hardware contract]]<td><TMPL_TEXTAREA partner_hard_contract>
+	</TMPL_LOOP>
+	<tr><td>[[administrative contact]]<td><TMPL_VAR administrative_contact_firstname>	<TMPL_VAR administrative_contact_lastname>	
+	<tr><td>[[technical_contact]]<td><TMPL_VAR technical_contact_firstname>	<TMPL_VAR technical_contact_lastname>	
+	<tr><td>[[IC]]<td><TMPL_VAR IC_firstname> <TMPL_VAR IC_lastname>
+	<tr><td>[[ITC]]<td><TMPL_VAR ITC_firstname> <TMPL_VAR ITC_lastname>
+	<tr><td>[[agency]]<td><TMPL_VAR agency_name>
+	</table>
+	<table>
+	<tr><td>
+	<input name="contractid" type="hidden" value="<TMPL_VAR contractid>">
+	<input name="submit" type="submit" value="[[modify]]">
+</form>
+<td><form method="post" action="index.php?whattodo=printcontract" onSubmit="this.printbutton.disabled=true;this.printbutton.value='[[Please wait]]'">
+	<input name="submit" type="submit" id="printbutton" value="[[printable]]">
+</form>
+<td><form method="post" action="index.php?whattodo=exportcsv">
+	<input name="submit" type="submit" id="csvbutton" value="[[csv]]">
+</form>
+</table>
+<p>
+<form name="additemsoft"  method="post" action="index.php?whattodo=additem">
+<table class="events">
+	<th colspan="10"><TMPL_VAR title> - [[items soft]]
+	<tr>
+		<td>[[PN]]
+		<td>[[hostid]]
+		<td>[[designation]]
+		<td>[[quantity]]
+		<td>[[low cost]]
+		<td>[[high cost]]
+		<td>[[renewal]]
+		<td>[[duration]]
+		([[months]])
+		<td>[[answer time]]
+		<td>[[answer type]]
+	</tr>
+	<TMPL_LOOP items_soft>
+	<tr onmouseover="javascript:style.background='#CCCCCC'"
+    onmouseout="javascript:style.background='#f4f4f4'"
+    onmousedown="javascript:window.location.href='index.php?whattodo=additem&itemid=<TMPL_VAR id>'">
+		<td><TMPL_VAR pn>
+		<td><TMPL_VAR hostid>
+		<td><TMPL_VAR designation>
+		<td><TMPL_VAR quantity>
+		<td><TMPL_VAR low_cost>
+		<td><TMPL_VAR high_cost>
+		<td><TMPL_DATE renewal>
+		<td><TMPL_VAR duration>
+		<td><TMPL_VAR answer_time>
+		<td><TMPL_VAR answer_type>
+	</tr>
+	</TMPL_LOOP>
+	<tr>
+		<td><TMPL_TEXT pn |size="20">
+		<td><TMPL_TEXT hostid | size="8">
+		<td><TMPL_TEXT designation | size="50">
+		<td><TMPL_TEXT quantity | size="6">
+		<td><TMPL_TEXT low_cost | size="6">
+		<td><TMPL_TEXT high_cost | size="6">
+		<td><TMPL_TEXT renewal | size="6">
+		<a href="#" onClick="cal.select(document.additemsoft.renewal,'anchor1','dd/MM/yyyy'); return false;" TITLE="cal1.select(document.additemsoft.renewal,'anchor1','dd/MM/yyyy'); return false;" NAME="anchor1" ID="anchor1">
+		<img src="<TMPL_VAR theme_url>/images/b_calendar.png" width="16" height="16" border="0" alt="[[Click Here to Pick up the date]]">
+		</a>
+		<td><TMPL_TEXT duration | size="6">
+		<td><select name="answer_time">
+			<option value="4h">4h</option>
+			<option value="8h">8h</option>
+			<option value="12h">12h</option>
+			<option value="JOS">JOS</option>
+		</select>
+		<td><TMPL_TEXT answer_type | size="6">
+		<td><input name="submit" type="submit" value="[[add]]">
+		<td><input name="type" type="hidden" value="software">
+	<input name="contractid" type="hidden" value="<TMPL_VAR contractid>">
+	</tr>
+	<tr>
+	<td colspan="4">[[Total cost software]]
+	<td nowrap><TMPL_VAR total_low_cost_software>
+	<td nowrap><TMPL_VAR total_high_cost_software>
+	</tr>
+</table>
+</form>
+<p>
+<form name="additemhard" method="post" action="index.php?whattodo=additem">
+<table class="events">
+	<th colspan="10"><TMPL_VAR title> - [[items hard]]
+	<tr>
+		<td>[[PN]]
+		<td>[[SN]]
+		<td>[[designation]]
+		<td>[[quantity]]
+		<td>[[low cost]]
+		<td>[[high cost]]
+		<td>[[renewal]]
+		<td>[[duration]]
+		([[months]])
+		<td>[[answer time]]
+		<td>[[answer type]]
+	</tr>
+	<TMPL_LOOP items_hard>
+	<tr onmouseover="javascript:style.background='#CCCCCC'"
+  	onmouseout="javascript:style.background='#f4f4f4'"
+  	onmousedown="javascript:window.location.href='index.php?whattodo=additem&itemid=<TMPL_VAR id>'">
+		<td><TMPL_VAR pn>
+		<td><TMPL_VAR sn>
+		<td><TMPL_VAR designation>
+		<td><TMPL_VAR quantity>
+		<td><TMPL_VAR low_cost>
+		<td><TMPL_VAR high_cost>
+		<td><TMPL_DATE renewal>
+		<td><TMPL_VAR duration>
+		<td><TMPL_VAR answer_time>
+		<td><TMPL_VAR answer_type>
+	</tr>
+	</TMPL_LOOP>
+	<tr>
+		<td><TMPL_TEXT pn | size="20">
+		<td><TMPL_TEXT sn | size="20">
+		<td><TMPL_TEXT designation | size="50">
+		<td><TMPL_TEXT quantity | size="6">
+		<td><TMPL_TEXT low_cost | size="6">
+		<td><TMPL_TEXT high_cost | size="6">
+		<td><TMPL_TEXT renewal | size="6"><a href="javascript:cal2.popup();">
+		<a href="#" onClick="cal.select(document.additemhard.renewal,'anchor1','dd/MM/yyyy'); return false;" TITLE="cal1.select(document.additemhard.renewal,'anchor1','dd/MM/yyyy'); return false;" NAME="anchor1" ID="anchor1">
+		<img src="<TMPL_VAR theme_url>/images/b_calendar.png" width="16" height="16" border="0" alt="[[Click Here to Pick up the date]]">
+		</a>
+		<td><TMPL_TEXT duration | size="6">
+		<td><select name="answer_time">
+			<option value="4h">4h</option>
+			<option value="8h">8h</option>
+			<option value="12h">12h</option>
+			<option value="JOS">JOS</option>
+		</select>
+		<td><TMPL_TEXT answer_type | size="6">
+		<td><input name="submit" type="submit" value="[[add]]">
+		<td><input name="type" type="hidden" value="hardware">
+		<input name="contractid" type="hidden" value="<TMPL_VAR contractid>">
+		<input name="commit" type="hidden" value="item">
+	</tr>
+	<tr>
+	<td colspan="4">[[Total cost hardware]]
+	<td nowrap><TMPL_VAR total_low_cost_hardware>
+	<td nowrap><TMPL_VAR total_high_cost_hardware>
+	</tr>
+</table>
+</form>
+<p>
+<table class="events">
+	<th colspan="10"><TMPL_VAR title> - [[total cost]]
+	<tr>
+		<td>[[low cost]]
+		<td>[[high cost]]
+		<td>[[margin]]
+	</tr>
+	<tr>
+		<td><TMPL_VAR total_low_cost_contract>
+		<td><TMPL_VAR total_high_cost_contract>
+		<td><TMPL_VAR margin>
+	</tr>
+</table>
+<p>
+<table class="events">
+	<th colspan="3"><TMPL_VAR title> - [[files]]	
+	<TMPL_LOOP files>
+		<tr><td><a href="javascript:OpenNew('<TMPL_VAR link ESCAPE="NONE">')"><TMPL_VAR name></a>
+	</TMPL_LOOP>
+	<tr><td>
+	<form method="post"enctype="multipart/form-data" action="index.php?whattodo=addfile&dir=contract/<TMPL_VAR contractid>">
+		<input type="hidden" name="MAX_FILE_SIZE" value="<TMPL_VAR max_file_size>">
+		<input type="file" name="userfile" size=10>
+		<input type="submit" value="[[upload]]">
+	</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="4"><TMPL_VAR title> - [[mails]]
+	<tr>
+		<th>[[from]]
+		<th>[[to]]
+		<th>[[date]]
+		<th>[[subject]]
+	<TMPL_LOOP mails>
+		<tr onmouseover="javascript:style.background='#CCCCCC'"
+   	 onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:OpenNew('index.php?whattodo=showmails&msgnum=<TMPL_VAR msgnum>')">
+			<td><TMPL_VAR from>
+			<td><TMPL_VAR to>
+			<td><TMPL_VAR date>
+			<td><TMPL_VAR subject>
+	</TMPL_LOOP>
+</table>
+
+<TMPL_INCLUDE NAME="footer.html">

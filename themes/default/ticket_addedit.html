@@ -1,0 +1,69 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form name="ticket" method="post" action="index.php?whattodo=addjob">
+<table class="tickets" id="tickets">
+	<tr><td>[[customer]]<td>
+	<TMPL_IF tid>
+		<TMPL_VAR customer_name>
+	<TMPL_ELSE>
+		<select name="cid" OnChange="update_ticket()">
+			<option selected value="<TMPL_VAR cid>"><TMPL_VAR customer_name></option>
+			<TMPL_LOOP customerslist>
+			<option value="<TMPL_VAR id>"><TMPL_VAR name></option>
+			</TMPL_LOOP>
+		</select>
+	</TMPL_IF>
+	<tr><td>
+	<tr><td>[[contact]]<td>
+	<TMPL_IF contactslist>
+		<select name="contact">
+			<option selected value="<TMPL_VAR contact_id>"><TMPL_VAR contact_firstname> <TMPL_VAR contact_lastname></option>
+			<TMPL_LOOP contactslist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		</TMPL_IF>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	<tr><td>[[summary]]<td><TMPL_TEXT summary | size="100" maxlen="5">
+	<tr><td>[[detail]]<td><textarea name="detail" cols="100"><TMPL_VAR detail></textarea>
+	<tr><td>[[category]]<td>
+	<TMPL_CUSTSELECT category | OnChange="update_items()">
+		<TMPL_OPTION none>
+    <TMPL_OPTION hardware> [[hardware]]
+    <TMPL_OPTION software> [[software]]
+  </TMPL_CUSTSELECT>
+	<TMPL_IF itemslist>
+	<script language="javascript">
+		var items_list = new Array();
+		items_list[0] = new Array();
+	<TMPL_LOOP itemslist>
+		items_list[<TMPL_VAR __PASS__>] = new Array(['<TMPL_VAR type>'],['<TMPL_VAR id>'],['<TMPL_VAR designation>']);
+	</TMPL_LOOP>
+	</script>
+		<tr><td>[[item]]<td>
+		<TMPL_IF tid>
+			<select name="item">
+			<option selected value="<TMPL_VAR item_id>"><TMPL_VAR item_designation></option>
+			</select>
+		<TMPL_ELSE>
+			<select name="item">
+			<option>---- [[select a category first]] ---</option>
+			</select>
+		</TMPL_IF>
+	</TMPL_IF>
+	<tr><td>[[priority]]<td><TMPL_RADIO priority>
+	<tr><td>[[assigned to]]<td><TMPL_SELECT assigned_to>
+	<TMPL_IF tid>
+	<tr><td colspan="2"><input name="submit" type="submit" value="[[apply]]">
+	<TMPL_ELSE>
+	<tr><td colspan="2"><input name="submit" type="submit" value="[[add]]">
+	<input name="opened_by" type="hidden" value="<TMPL_VAR opened_id>">
+	<input name="closed_by" type="hidden" value="<TMPL_VAR closed_id>">
+	</TMPL_IF>
+	<input name="id" type="hidden" value="<TMPL_VAR tid>">
+	<input name="status" type="hidden" value="<TMPL_VAR status>">
+</table>
+
+</form>
+
+<TMPL_INCLUDE NAME="footer.html">

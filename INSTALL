@@ -1,0 +1,13 @@
+To install simply create a mysql database and import sql/mhd2.sql
+
+mysqladmin -u root -p create mhd2
+mysql -u root -p mhd2 < mhd2.sql
+
+the name of the database is not a mandatory
+You mut edit include/config.inc.php to fit your needs
+Next you have to configure apache to see the mhd2 directory and go with a browser to  http://localhost/mhd2 (for example)
+
+The default login/password is admin/admin !!! CHANGE IT AFTER INSTALL !!!
+To modify parameters you can go to the config entry in the menu
+The repository, where files for tickets, customers and contracts are stored, is relative to the base_url and must have three subdirectories "customer", "ticket" and "contract"
+

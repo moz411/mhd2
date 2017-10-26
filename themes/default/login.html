@@ -1,0 +1,22 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<h1><TMPL_VAR title></h1>
+<h3>[[Please Enter Your User ID and Password then press the -Sign In- Button]]</h3>
+Demo: guest/guest
+<hr>
+<form name="loginform" method="post" action="index.php">
+<table>
+<tr>
+<td>[[Username]]</td>
+<td><TMPL_TEXT username>
+<tr>
+<td>[[Password]]
+<td><input type="password" name="password">
+<tr>
+<td>[[Language]]
+<td><TMPL_SELECT locale | size="1" onchange="javascript:location.reload()">
+<tr>
+<td colspan="2" ><input name="submit" type="submit" value="[[Sign In]]">
+</table>
+</form>
+<TMPL_INCLUDE NAME="footer.html">

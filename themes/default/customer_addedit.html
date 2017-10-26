@@ -1,0 +1,65 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form name="customer" method="post" action="index.php?whattodo=addcustomer">
+<table class="tickets">
+<tr><td>[[name]]<td><TMPL_TEXT name>
+	<tr><td>[[phone]]<td><TMPL_TEXT phone>
+	<tr><td>[[fax]]<td><TMPL_TEXT fax>
+	<tr><td>[[email]]<td><TMPL_TEXT email>	
+	<tr><td>[[address]]<td><TMPL_TEXT address>
+	<TMPL_IF cid>
+	<tr><td>[[administrative contact]]<td>
+		<select name="administrative_contact">
+			<option selected value="<TMPL_VAR administrative_contact>"><TMPL_VAR administrative_contact_firstname> <TMPL_VAR administrative_contact_lastname></option>
+			<TMPL_LOOP contactslist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	<tr><td>[[technical contact]]<td>
+		<select name="technical_contact">
+			<option selected value="<TMPL_VAR technical_contact>"><TMPL_VAR technical_contact_firstname> <TMPL_VAR technical_contact_lastname></option>
+			<TMPL_LOOP contactslist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	</TMPL_IF>
+	<tr><td>[[type]]<td>
+		<TMPL_CUSTSELECT type>
+		<TMPL_OPTION external>[[external]]
+    <TMPL_OPTION internal> [[internal]]
+    <TMPL_OPTION partner> [[partner]]
+  </TMPL_CUSTSELECT>
+	<TMPL_IF cid>
+	<tr><td>[[IC]]<td>
+		<select name="IC">
+			<option selected value="<TMPL_VAR IC>"><TMPL_VAR IC_firstname> <TMPL_VAR IC_lastname></option>
+			<TMPL_LOOP iclist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	<tr><td>[[ITC]]<td>
+		<select name="ITC">
+			<option selected value="<TMPL_VAR ITC>"><TMPL_VAR ITC_firstname> <TMPL_VAR ITC_lastname></option>
+			<TMPL_LOOP itclist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	</TMPL_IF>
+	<tr><td>[[comments]]<td><textarea name="comments"><TMPL_VAR comments></textarea>
+	<tr><td>[[logo]]<td><TMPL_VAR logo>
+
+	<TMPL_IF cid>
+	<tr><td colspan="2"><input name="submit" type="submit" value="[[apply]]">
+	<TMPL_ELSE>
+	<tr><td colspan="2"><input name="submit" type="submit" value="[[add]]">
+	</TMPL_IF>
+	<input name="id" type="hidden" value="<TMPL_VAR cid>">
+</table>
+
+</form>
+
+<TMPL_INCLUDE NAME="footer.html">

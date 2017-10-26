@@ -1,0 +1,21 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<table class="tickets">
+	<tr>
+		<TMPL_LOOP columns>
+			<td><a href="<TMPL_VAR url ESCAPE="NONE">"><TMPL_VAR name></a>
+		</TMPL_LOOP>
+	</tr>
+	<TMPL_LOOP customers>
+		<tr onmouseover="javascript:style.background='#CCCCCC'"
+    	onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:window.location.href='index.php?whattodo=viewcustomers&cid=<TMPL_VAR id>'">
+			<td><TMPL_VAR id>
+			<td><TMPL_VAR name>
+			<td><TMPL_VAR type>
+			<td><TMPL_VAR logo>
+		</tr>
+	</TMPL_LOOP>
+</table>
+
+<TMPL_INCLUDE NAME="footer.html">

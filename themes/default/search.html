@@ -1,0 +1,41 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form name="search" method="post" action="index.php?whattodo=search">
+<table class="tickets">
+<th>[[Search in table]]
+<th>[[in column]]
+<th>[[for value]]
+<tr><td>
+		<select name="table" OnChange="submit();">
+			<option selected value="<TMPL_VAR table_scope>"><TMPL_VAR table_name></option>
+			<TMPL_LOOP tables_select>
+				<option value="<TMPL_VAR scope>"><TMPL_VAR name></option>
+			</TMPL_LOOP>
+		</select>
+</td>
+<td>
+		<select name="column" OnChange="submit()">
+			<option selected value="<TMPL_VAR column_scope>"><TMPL_VAR column_name></option>
+			<TMPL_LOOP columns_select>
+				<option value="<TMPL_VAR scope>"><TMPL_VAR name></option>
+			</TMPL_LOOP>
+		</select>
+</td>
+<td>
+	<TMPL_IF customerslist>
+	<select name="string" OnChange="submit()">
+		<option selected value="<TMPL_VAR string>"><TMPL_VAR string></option>
+		<TMPL_LOOP customerslist>
+			<option value="<TMPL_VAR name>"><TMPL_VAR name></option>
+		</TMPL_LOOP>
+	</select>
+	<TMPL_ELSE>
+		<TMPL_TEXT string | size="20">
+	</TMPL_IF>
+</td></tr>
+</table>
+
+</form>
+
+
+<TMPL_INCLUDE NAME="footer.html">

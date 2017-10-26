@@ -1,0 +1,51 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<table class="tickets">
+	<tr>
+		<TMPL_LOOP columns>
+			<td><a href="<TMPL_VAR url ESCAPE="NONE">"><TMPL_VAR name></a>
+		</TMPL_LOOP>
+	</tr>	
+	<TMPL_LOOP stats_total>
+	<tr>
+		<td><TMPL_VAR total_tickets>
+		<td><TMPL_VAR opened_tickets>
+		<td><TMPL_VAR hard_tickets>
+		<td><TMPL_VAR soft_tickets>
+	</tr>
+	</TMPL_LOOP>
+</table>
+
+<p>
+
+<table  class="tickets">
+	<TMPL_LOOP stats_by_date>
+		<th><TMPL_VAR year>
+		<tr>
+		<TMPL_LOOP month>
+			<td><TMPL_VAR name>
+		</TMPL_LOOP>
+	</tr>
+	</TMPL_LOOP>
+</table>
+
+<p>
+
+<table class="tickets">
+		<th>[[year]]
+		<th>[[number of contracts]]
+		<th>[[total low cost]]
+		<th>[[total high cost]]
+		<th>[[total margin]]
+	<TMPL_LOOP stats_contracts_by_date>
+		<tr>
+		<td><TMPL_VAR year>
+		<td><TMPL_VAR total_contracts>
+		<td><TMPL_VAR total_low_cost>
+		<td><TMPL_VAR total_high_cost>
+		<td><TMPL_VAR total_margin>
+		</tr>
+	</TMPL_LOOP>
+</table>
+
+<TMPL_INCLUDE NAME="footer.html">

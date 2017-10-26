@@ -1,0 +1,404 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2005-03-15 16:04+0100\n"
+"Last-Translator: Thomas Dupouy <moz@gmx.fr>\n"
+"Language-Team: Française <moz@gmx.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: entrÃ©e
+#: standard:82
+msgid "Username"
+msgstr "Utilisateur"
+
+#: entrÃ©e
+#: standard:83
+msgid "Password"
+msgstr "Mot de passe"
+
+#: entrÃ©e
+#: standard:84
+msgid "Sign In"
+msgstr "Entrer"
+
+#: entrÃ©e
+#: standard:85
+msgid "ID"
+msgstr "ID"
+
+#: entrÃ©e
+#: standard:86
+msgid "client"
+msgstr "client"
+
+#: entrÃ©e
+#: standard:87
+msgid "status"
+msgstr "status"
+
+#: entrÃ©e
+#: standard:88
+msgid "summary"
+msgstr "sommaire"
+
+#: entrÃ©e
+#: standard:89
+msgid "priority"
+msgstr "priorité"
+
+#: entrÃ©e
+#: standard:90
+msgid "creator"
+msgstr "créateur"
+
+#: entrÃ©e
+#: standard:91
+msgid "assigned"
+msgstr "assigné à"
+
+#: entrÃ©e
+#: standard:92
+msgid "opened"
+msgstr "ouvert par"
+
+#: entrÃ©e
+#: standard:93
+msgid "closed"
+msgstr "fermé"
+
+msgid "add"
+msgstr "ajouter"
+
+msgid "added by"
+msgstr "ajouté par"
+
+msgid "address"
+msgstr "adresse"
+
+msgid "administrative contact"
+msgstr "contact administratif"
+
+msgid "answer time"
+msgstr "temps de réponse"
+
+msgid "answer type"
+msgstr "type de réponse"
+
+msgid "apply"
+msgstr "appliquer"
+
+msgid "assigned to"
+msgstr "assigné à"
+
+msgid "category"
+msgstr "catégorie"
+
+msgid "close"
+msgstr "fermer"
+
+msgid "comments"
+msgstr "commentaires"
+
+msgid "contact"
+msgstr "contact"
+
+msgid "customer"
+msgstr "client"
+
+msgid "date"
+msgstr "date"
+
+msgid "delivery address"
+msgstr "adresse de livraison"
+
+msgid "description"
+msgstr "description"
+
+msgid "designation"
+msgstr "désignation"
+
+msgid "detail"
+msgstr "détail"
+
+msgid "email"
+msgstr "e-mail"
+
+msgid "events"
+msgstr "évenements"
+
+msgid "external"
+msgstr "externe"
+
+msgid "facturation"
+msgstr "facturation"
+
+msgid "fax"
+msgstr "fax"
+
+msgid "files"
+msgstr "fichiers"
+
+msgid "firstname"
+msgstr "prénom"
+
+msgid "hardware"
+msgstr "matériel"
+
+msgid "high cost"
+msgstr "coût haut"
+
+msgid "hostid"
+msgstr "hostid"
+
+msgid "IC"
+msgstr "IC"
+
+msgid "id"
+msgstr "id"
+
+msgid "internal"
+msgstr "interne"
+
+msgid "ITC"
+msgstr "ITC"
+
+msgid "item"
+msgstr "objet"
+
+msgid "items hard"
+msgstr "objets matériels"
+
+msgid "items soft"
+msgstr "objets logiciels"
+
+msgid "job"
+msgstr "poste"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "lastname"
+msgstr "nom"
+
+msgid "logo"
+msgstr "logo"
+
+msgid "low cost"
+msgstr "coût bas"
+
+msgid "margin"
+msgstr "marge"
+
+msgid "mhd login"
+msgstr "Login MHD"
+
+msgid "modify"
+msgstr "modifier"
+
+msgid "name"
+msgstr "nom"
+
+msgid "New Event"
+msgstr "Nouvel événement"
+
+msgid "number"
+msgstr "nombre"
+
+msgid "opened by"
+msgstr "ouvert par"
+
+msgid "partner"
+msgstr "partenaire"
+
+msgid "payment"
+msgstr "paiement"
+
+msgid "phone"
+msgstr "téléphone"
+
+msgid "Please Enter Your User ID and Password then press the -Sign In- Button"
+msgstr "Entrez votre login et mot de passe et pressez le bouton - Entrer -"
+
+msgid "Please select an item in the taskbar"
+msgstr "Sélectionnez un objet dans la barre des tâches"
+
+msgid "PN"
+msgstr "PN"
+
+msgid "quantity"
+msgstr "quantité"
+
+msgid "renewal"
+msgstr "renouvellement"
+
+msgid "reopen"
+msgstr "re-ouvrir"
+
+msgid "select a category first"
+msgstr "sélectionnez d'abord une catégorie"
+
+msgid "SN"
+msgstr "SN"
+
+msgid "software"
+msgstr "logiciel"
+
+msgid "start date"
+msgstr "date de début"
+
+msgid "technical contact"
+msgstr "contact technique"
+
+msgid "technical_contact"
+msgstr "contact_technique"
+
+msgid "type"
+msgstr "type"
+
+msgid "upload"
+msgstr "télécharger"
+
+msgid "date opened"
+msgstr "ouvert le"
+
+msgid "date closed"
+msgstr "fermé le"
+
+msgid "date updated"
+msgstr "modifié le"
+
+msgid "view all tickets"
+msgstr "voir tous les tickets"
+
+msgid "view only opened tickets"
+msgstr "voir les tickets ouverts"
+
+msgid "view all customers"
+msgstr "voir tous les clients"
+
+msgid "view only customers with contract"
+msgstr "voir seulement les clients sous contrat"
+
+msgid "view all contracts"
+msgstr "voir tous les contrats"
+
+msgid "view only opened contracts"
+msgstr "voir seulement les contrats en cours"
+
+msgid "low"
+msgstr "basse"
+
+msgid "normal"
+msgstr "normale"
+
+msgid "high"
+msgstr "haute"
+
+msgid "urgent"
+msgstr "urgent"
+
+msgid "add job"
+msgstr "ajouter une tâche"
+
+msgid "view jobs"
+msgstr "voir une tâche"
+
+msgid "add contract"
+msgstr "ajouter un contrat"
+
+msgid "view contracts"
+msgstr "voir un contrat"
+
+msgid "add customer"
+msgstr "ajouter un client"
+
+msgid "view customers"
+msgstr "voir une fiche client"
+
+msgid "add contact"
+msgstr "ajouter un contact"
+
+msgid "view contacts"
+msgstr "voir une fiche contact"
+
+msgid "Tickets"
+msgstr "Tickets"
+
+msgid "Customers"
+msgstr "Clients"
+
+msgid "Contracts"
+msgstr "Contrats"
+
+msgid "Contacts"
+msgstr "Contacts"
+
+msgid "Booking"
+msgstr "Calendrier"
+
+msgid "Docs"
+msgstr "Docs"
+
+msgid "Statistics"
+msgstr "Statistiques"
+
+msgid "Search"
+msgstr "Rechercher"
+
+msgid "Logout"
+msgstr "Déconnecter"
+
+msgid "duration"
+msgstr "durée"
+
+msgid "months"
+msgstr "mois"
+
+msgid "Total cost hardware"
+msgstr "Coût matériel total"
+
+msgid "Total cost software"
+msgstr "Coût logiciel total"
+
+msgid "Customer"
+msgstr "Client"
+
+msgid "access denied"
+msgstr "accès refusé"
+
+msgid "add ticket"
+msgstr "ajouter un ticket"
+
+msgid "end date"
+msgstr "date de fin"
+
+msgid "partner software"
+msgstr "partenaire logiciel"
+
+msgid "partner software contract"
+msgstr "contrat partenaire logiciel"
+
+msgid "partner hardware"
+msgstr "partenaire matériel"
+
+msgid "partner hardware contract"
+msgstr "contrat partenaire matériel"
+
+msgid "bargain"
+msgstr "remise"
+
+msgid "Welcome to MHD²"
+msgstr "Bienvenue au MHD²"
+
+msgid "weeks"
+msgstr "sem."
+
+msgid "days"
+msgstr "jours"
+
+msgid "hours"
+msgstr "heures"
+

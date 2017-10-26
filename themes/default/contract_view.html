@@ -1,0 +1,25 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<table class="tickets">
+	<tr>
+		<TMPL_LOOP columns>
+			<td><a href="<TMPL_VAR url ESCAPE="NONE">"><TMPL_VAR name></a>
+		</TMPL_LOOP>
+	</tr>
+	<TMPL_LOOP contracts>
+	<tr onmouseover="javascript:style.background='#CCCCCC'"
+    onmouseout="javascript:style.background='#f4f4f4'"
+    onmousedown="javascript:window.location.href='index.php?whattodo=viewcontracts&contractid=<TMPL_VAR id>'">
+		<td><TMPL_VAR id>
+		<td><TMPL_VAR customer>
+		<td><TMPL_VAR number>
+		<td><TMPL_DATE start_date>
+		<td><TMPL_DATE end_date>
+		<td><TMPL_VAR total_low_cost_contract>
+		<td><TMPL_VAR total_high_cost_contract>
+		<td><TMPL_VAR margin>
+	</tr>
+	</TMPL_LOOP>
+</table>
+
+<TMPL_INCLUDE NAME="footer.html">

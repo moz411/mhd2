@@ -1,0 +1,19 @@
+<TMPL_IF taskbar>
+	<TMPL_LOOP links>
+		<a href="<TMPL_VAR link ESCAPE="NONE">"><TMPL_VAR title></a>
+	</TMPL_LOOP>
+</TMPL_IF>
+<TMPL_IF stderr>
+	<hr>
+	<h3><font color='red'><TMPL_VAR stderr></font></h3>
+</TMPL_IF>
+</div>
+<script language="JavaScript" id="calendar">
+<!--
+			var cal = new CalendarPopup();
+			cal.showYearNavigation();
+			cal.showYearNavigationInput();
+//-->
+</script>
+</body>
+</html>

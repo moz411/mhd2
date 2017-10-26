@@ -1,0 +1,45 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<table class="tickets">
+<th colspan="11"><TMPL_VAR title>
+	<tr>
+		<td>[[id]]
+		<td>[[password]]
+		<td>[[firstname]]
+		<td>[[lastname]]
+		<td>[[phone]]
+		<td>[[email]]
+		<td>[[groupe]]
+		<td>
+	</tr>
+
+<TMPL_LOOP Users>
+<form name="users" method="post" action="index.php?whattodo=users">
+	<tr>
+		<td><TMPL_VAR id>
+		<td><TMPL_TEXT passwd | size="8">
+		<td><TMPL_TEXT firstname | size="20">
+		<td><TMPL_TEXT lastname | size="20">
+		<td><TMPL_TEXT phone | size="12">
+		<td><TMPL_TEXT email | size="20">
+		<td><TMPL_SELECT groupe>
+		<input name="id" type="hidden" value="<TMPL_VAR id>">
+		<td><input name="submit" type="submit" value="[[apply]]">
+	</tr>
+</form>
+</TMPL_LOOP>
+<form name="adduser" method="post" action="index.php?whattodo=users">
+	<tr>
+		<td><TMPL_TEXT id>
+		<td><TMPL_TEXT passwd | size="8">
+		<td><TMPL_TEXT firstname | size="20">
+		<td><TMPL_TEXT lastname | size="20">
+		<td><TMPL_TEXT phone | size="12">
+		<td><TMPL_TEXT email | size="20">
+		<td><TMPL_SELECT groups>
+		<td><input name="submit" type="submit" value="[[add]]">
+	</tr>
+</form>
+</table>
+[[Passwords are MD5: can be modified but not viewed as text]]
+

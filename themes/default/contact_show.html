@@ -1,0 +1,23 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form method="post" action="index.php?whattodo=addcontact">
+<table class="tickets">
+	<th colspan="2"><TMPL_VAR title>
+	<TMPL_LOOP contact>
+		<tr><td>[[firstname]]<td><TMPL_VAR firstname>
+		<tr><td>[[lastname]]<td><TMPL_VAR lastname>
+		<tr><td>[[customer]]<td><TMPL_VAR customer_name>
+		<tr><td>[[phone]]<td><TMPL_VAR phone>
+		<tr><td>[[email]]<td><TMPL_VAR email>
+		<tr><td>[[fax]]<td><TMPL_VAR fax>	
+		<tr><td>[[address]]<td><TMPL_VAR address>
+		<tr><td>[[job]]<td><TMPL_VAR job>
+	</TMPL_LOOP>
+	<tr><td colspan="2">
+	<input name="uid" type="hidden" value="<TMPL_VAR uid>">
+	<input name="cid" type="hidden" value="<TMPL_VAR cid>">
+	<input name="submit" type="submit" value="[[modify]]">	
+</table>
+</form>
+
+<TMPL_INCLUDE NAME="footer.html">

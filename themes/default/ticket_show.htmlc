@@ -1,0 +1,144 @@
+O:8:"template":6:{s:8:"_version";d:1.20999999999999996447286321199499070644378662109375;s:5:"_file";s:31:"themes/default/ticket_show.html";s:7:"_tokens";a:810:{i:0;s:30:"<?xml version="1.0" encoding="";i:1;s:2:"";i:2;s:8:"encoding";i:3;N;i:4;N;i:5;s:230:""?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta HTTP-EQUIV="content-type" CONTENT="text/html;charset=";i:6;s:2:"";i:7;s:8:"encoding";i:8;N;i:9;N;i:10;s:3:"">
+";i:11;s:2:"";i:12;s:7:"timeout";i:13;N;i:14;N;i:15;s:38:"		<META HTTP-EQUIV="Refresh" CONTENT="";i:16;s:2:"";i:17;s:7:"timeout";i:18;N;i:19;N;i:20;s:3:"">
+";i:21;s:2:"";i:22;N;i:23;N;i:24;N;i:25;s:62:"		<link rel="stylesheet" type="text/css" media="screen" href="";i:26;s:2:"";i:27;s:9:"theme_url";i:28;N;i:29;N;i:30;s:23:"/mhd2.css" />
+		<title>";i:31;s:2:"";i:32;s:5:"title";i:33;N;i:34;N;i:35;s:305:"</title>
+		<META HTTP-EQUIV="Expires" CONTENT="0">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+
+<script language="JavaScript" src="include/functions.js"></script> 
+<script language="JavaScript" src="libraries/CalendarPopup.js"></script>
+
+</head>
+";i:36;s:2:"";i:37;s:5:"close";i:38;N;i:39;N;i:40;s:31:"<BODY onLoad="changeparent()">
+";i:41;s:2:"";i:42;N;i:43;N;i:44;N;i:45;s:1:"
+";i:46;s:2:"";i:47;s:7:"taskbar";i:48;N;i:49;N;i:50;s:27:"	<body>
+	<div id="centre">
+";i:51;s:2:"";i:52;s:7:"taskbar";i:53;N;i:54;N;i:55;s:2:"";i:56;s:4:"menu";i:57;N;i:58;N;i:59;s:14:"<ul id="nav">
+";i:60;s:2:"";i:61;s:8:"viewjobs";i:62;N;i:63;N;i:64;s:56:"	<li class="pict"><a href="index.php?whattodo=viewjobs">";i:65;s:2:"";i:66;s:7:"Tickets";i:67;N;i:68;N;i:69;s:12:"</a>
+		<ul>
+";i:70;s:2:"";i:71;s:6:"addjob";i:72;N;i:73;N;i:74;s:43:"			<li><a href="index.php?whattodo=addjob">";i:75;s:2:"";i:76;s:10:"add ticket";i:77;N;i:78;N;i:79;s:10:"</a></li>
+";i:80;s:2:"";i:81;N;i:82;N;i:83;N;i:84;s:15:"		</ul>
+	</li>
+";i:85;s:2:"";i:86;N;i:87;N;i:88;N;i:89;s:2:"";i:90;s:13:"viewcustomers";i:91;N;i:92;N;i:93;s:61:"	<li class="pict"><a href="index.php?whattodo=viewcustomers">";i:94;s:2:"";i:95;s:9:"Customers";i:96;N;i:97;N;i:98;s:12:"</a>
+		<ul>
+";i:99;s:2:"";i:100;s:11:"addcustomer";i:101;N;i:102;N;i:103;s:48:"			<li><a href="index.php?whattodo=addcustomer">";i:104;s:2:"";i:105;s:12:"add customer";i:106;N;i:107;N;i:108;s:10:"</a></li>
+";i:109;s:2:"";i:110;N;i:111;N;i:112;N;i:113;s:15:"		</ul>
+	</li>
+";i:114;s:2:"";i:115;N;i:116;N;i:117;N;i:118;s:2:"";i:119;s:13:"viewcontracts";i:120;N;i:121;N;i:122;s:61:"	<li class="pict"><a href="index.php?whattodo=viewcontracts">";i:123;s:2:"";i:124;s:9:"Contracts";i:125;N;i:126;N;i:127;s:12:"</a>
+		<ul>
+";i:128;s:2:"";i:129;s:11:"addcontract";i:130;N;i:131;N;i:132;s:48:"			<li><a href="index.php?whattodo=addcontract">";i:133;s:2:"";i:134;s:12:"add contract";i:135;N;i:136;N;i:137;s:10:"</a></li>
+";i:138;s:2:"";i:139;N;i:140;N;i:141;N;i:142;s:15:"		</ul>
+	</li>
+";i:143;s:2:"";i:144;N;i:145;N;i:146;N;i:147;s:2:"";i:148;s:12:"viewcontacts";i:149;N;i:150;N;i:151;s:60:"	<li class="pict"><a href="index.php?whattodo=viewcontacts">";i:152;s:2:"";i:153;s:8:"Contacts";i:154;N;i:155;N;i:156;s:12:"</a>
+		<ul>
+";i:157;s:2:"";i:158;s:10:"addcontact";i:159;N;i:160;N;i:161;s:47:"			<li><a href="index.php?whattodo=addcontact">";i:162;s:2:"";i:163;s:11:"add contact";i:164;N;i:165;N;i:166;s:10:"</a></li>
+";i:167;s:2:"";i:168;N;i:169;N;i:170;N;i:171;s:15:"		</ul>
+	</li>
+";i:172;s:2:"";i:173;N;i:174;N;i:175;N;i:176;s:2:"";i:177;s:7:"booking";i:178;N;i:179;N;i:180;s:55:"	<li class="pict"><a href="index.php?whattodo=booking">";i:181;s:2:"";i:182;s:7:"Booking";i:183;N;i:184;N;i:185;s:10:"</a></li>
+";i:186;s:2:"";i:187;N;i:188;N;i:189;N;i:190;s:2:"";i:191;s:8:"viewdocs";i:192;N;i:193;N;i:194;s:65:"	<li class="pict"><a href="docs/TODO_CALLS.html" target="_blank">";i:195;s:2:"";i:196;s:4:"Docs";i:197;N;i:198;N;i:199;s:10:"</a></li>
+";i:200;s:2:"";i:201;N;i:202;N;i:203;N;i:204;s:2:"";i:205;s:5:"stats";i:206;N;i:207;N;i:208;s:53:"	<li class="pict"><a href="index.php?whattodo=stats">";i:209;s:2:"";i:210;s:10:"Statistics";i:211;N;i:212;N;i:213;s:10:"</a></li>
+";i:214;s:2:"";i:215;N;i:216;N;i:217;N;i:218;s:2:"";i:219;s:6:"config";i:220;N;i:221;N;i:222;s:54:"	<li class="pict"><a href="index.php?whattodo=config">";i:223;s:2:"";i:224;s:13:"Configuration";i:225;N;i:226;N;i:227;s:12:"</a>
+		<ul>
+";i:228;s:2:"";i:229;s:5:"users";i:230;N;i:231;N;i:232;s:42:"			<li><a href="index.php?whattodo=users">";i:233;s:2:"";i:234;s:5:"users";i:235;N;i:236;N;i:237;s:10:"</a></li>
+";i:238;s:2:"";i:239;N;i:240;N;i:241;N;i:242;s:2:"";i:243;s:6:"groups";i:244;N;i:245;N;i:246;s:43:"			<li><a href="index.php?whattodo=groups">";i:247;s:2:"";i:248;s:6:"groups";i:249;N;i:250;N;i:251;s:10:"</a></li>
+";i:252;s:2:"";i:253;N;i:254;N;i:255;N;i:256;s:15:"		</ul>
+	</li>
+";i:257;s:2:"";i:258;N;i:259;N;i:260;N;i:261;s:2:"";i:262;s:6:"search";i:263;N;i:264;N;i:265;s:54:"	<li class="pict"><a href="index.php?whattodo=search">";i:266;s:2:"";i:267;s:6:"Search";i:268;N;i:269;N;i:270;s:10:"</a></li>
+";i:271;s:2:"";i:272;N;i:273;N;i:274;N;i:275;s:2:"";i:276;s:6:"logout";i:277;N;i:278;N;i:279;s:54:"	<li class="pict"><a href="index.php?whattodo=logout">";i:280;s:2:"";i:281;s:6:"Logout";i:282;N;i:283;N;i:284;s:10:"</a></li>
+";i:285;s:2:"";i:286;N;i:287;N;i:288;N;i:289;s:2:"";i:290;s:8:"viewjobs";i:291;N;i:292;N;i:293;s:229:"	<li class="search">
+		<form method=GET>
+			<input type="hidden" name="whattodo" value="viewjobs">
+		# <input type="text" class="searchbutton" size="3" name="tid" value="" OnChange="submit()" OnFocus="value=''">
+		</form>
+	</li>
+";i:294;s:2:"";i:295;N;i:296;N;i:297;N;i:298;s:2:"";i:299;s:6:"search";i:300;N;i:301;N;i:302;s:262:"	<li class="search">
+		<form action="index.php?whattodo=search" method="POST">
+			<input type="hidden" name="table" value="tickets">
+			<input type="hidden" name="column" value="summary">
+			<input type="text" class="searchbutton" size="15" name="string" value="";i:303;s:2:"";i:304;s:6:"Search";i:305;N;i:306;N;i:307;s:59:"" OnChange="submit()" OnFocus="value=''">
+		</form>
+	</li>
+";i:308;s:2:"";i:309;N;i:310;N;i:311;N;i:312;s:6:"</ul>
+";i:313;s:2:"";i:314;N;i:315;N;i:316;N;i:317;s:2:"";i:318;N;i:319;N;i:320;N;i:321;s:20:"	<br /><br /><br />
+";i:322;s:2:"";i:323;s:5:"links";i:324;N;i:325;N;i:326;s:11:"		<a href="";i:327;s:2:"";i:328;s:4:"link";i:329;s:4:"NONE";i:330;N;i:331;s:2:"">";i:332;s:2:"";i:333;s:5:"title";i:334;N;i:335;N;i:336;s:5:"</a>
+";i:337;s:2:"";i:338;N;i:339;N;i:340;N;i:341;s:2:"	
+";i:342;s:2:"";i:343;N;i:344;N;i:345;N;i:346;s:33:"	<BODY onLoad="fitWindowSize()">
+";i:347;s:2:"";i:348;N;i:349;N;i:350;N;i:351;s:98:"
+<form method="post" action="index.php?whattodo=addjob">
+<table class="tickets">
+	<th colspan="2">";i:352;s:2:"";i:353;s:5:"title";i:354;N;i:355;N;i:356;s:2:"";i:357;s:8:"customer";i:358;N;i:359;N;i:360;s:10:"		<tr><td>";i:361;s:2:"";i:362;s:8:"customer";i:363;N;i:364;N;i:365;s:50:"<td><a href="index.php?whattodo=viewcustomers&cid=";i:366;s:2:"";i:367;s:3:"cid";i:368;N;i:369;N;i:370;s:2:"">";i:371;s:2:"";i:372;s:4:"name";i:373;N;i:374;N;i:375;s:46:"</a>
+		<input name="cid" type="hidden" value="";i:376;s:2:"";i:377;s:3:"cid";i:378;N;i:379;N;i:380;s:3:"">
+";i:381;s:2:"";i:382;N;i:383;N;i:384;N;i:385;s:2:"";i:386;s:7:"contact";i:387;N;i:388;N;i:389;s:10:"		<tr><td>";i:390;s:2:"";i:391;s:7:"contact";i:392;N;i:393;N;i:394;s:4:"<td>";i:395;s:2:"";i:396;s:9:"firstname";i:397;N;i:398;N;i:399;s:1:" ";i:400;s:2:"";i:401;s:8:"lastname";i:402;N;i:403;N;i:404;s:10:"		<tr><td>";i:405;s:2:"";i:406;s:5:"phone";i:407;N;i:408;N;i:409;s:4:"<td>";i:410;s:2:"";i:411;s:5:"phone";i:412;N;i:413;N;i:414;s:10:"		<tr><td>";i:415;s:2:"";i:416;s:5:"email";i:417;N;i:418;N;i:419;s:20:"<td><a href="mailto:";i:420;s:2:"";i:421;s:5:"email";i:422;N;i:423;N;i:424;s:9:"?subject=";i:425;s:2:"";i:426;s:7:"subject";i:427;s:7:"\"URL\"";i:428;N;i:429;s:2:"">";i:430;s:2:"";i:431;s:5:"email";i:432;N;i:433;N;i:434;s:46:"</a>
+		<input name="uid" type="hidden" value="";i:435;s:2:"";i:436;s:3:"uid";i:437;N;i:438;N;i:439;s:3:"">
+";i:440;s:2:"";i:441;N;i:442;N;i:443;N;i:444;s:2:"";i:445;s:6:"ticket";i:446;N;i:447;N;i:448;s:10:"		<tr><td>";i:449;s:2:"";i:450;s:7:"summary";i:451;N;i:452;N;i:453;s:4:"<td>";i:454;s:2:"";i:455;s:7:"summary";i:456;N;i:457;N;i:458;s:10:"		<tr><td>";i:459;s:2:"";i:460;s:6:"detail";i:461;N;i:462;N;i:463;s:4:"<td>";i:464;s:2:"";i:465;s:6:"detail";i:466;s:0:"";i:467;N;i:468;s:10:"		<tr><td>";i:469;s:2:"";i:470;s:8:"category";i:471;N;i:472;N;i:473;s:4:"<td>";i:474;s:2:"";i:475;s:8:"category";i:476;N;i:477;N;i:478;s:10:"		<tr><td>";i:479;s:2:"";i:480;s:4:"item";i:481;N;i:482;N;i:483;s:4:"<td>";i:484;s:2:"";i:485;s:16:"item_designation";i:486;N;i:487;N;i:488;s:2:"";i:489;s:7:"item_sn";i:490;N;i:491;N;i:492;s:5:" SN :";i:493;s:2:"";i:494;s:7:"item_sn";i:495;N;i:496;N;i:497;s:2:"";i:498;N;i:499;N;i:500;N;i:501;s:10:"		<tr><td>";i:502;s:2:"";i:503;s:9:"opened by";i:504;N;i:505;N;i:506;s:4:"<td>";i:507;s:2:"";i:508;s:9:"opened_by";i:509;N;i:510;N;i:511;s:10:"		<tr><td>";i:512;s:2:"";i:513;s:11:"assigned to";i:514;N;i:515;N;i:516;s:4:"<td>";i:517;s:2:"";i:518;s:11:"assigned_to";i:519;N;i:520;N;i:521;s:2:"";i:522;N;i:523;N;i:524;N;i:525;s:2:"";i:526;s:8:"priority";i:527;N;i:528;N;i:529;s:10:"		<tr><td>";i:530;s:2:"";i:531;s:8:"priority";i:532;N;i:533;N;i:534;s:13:"<td bgcolor="";i:535;s:2:"";i:536;s:5:"color";i:537;N;i:538;N;i:539;s:2:"">";i:540;s:2:"";i:541;s:4:"text";i:542;N;i:543;N;i:544;s:2:"";i:545;N;i:546;N;i:547;N;i:548;s:62:"	<tr><td colspan="2">
+	<input name="tid" type="hidden" value="";i:549;s:2:"";i:550;s:3:"tid";i:551;N;i:552;N;i:553;s:46:"">
+	<input name="submit" type="submit" value="";i:554;s:2:"";i:555;s:6:"modify";i:556;N;i:557;N;i:558;s:3:"">
+";i:559;s:2:"";i:560;s:5:"close";i:561;N;i:562;N;i:563;s:44:"		<input name="submit" type="submit" value="";i:564;s:2:"";i:565;s:6:"reopen";i:566;N;i:567;N;i:568;s:3:"">
+";i:569;s:2:"";i:570;N;i:571;N;i:572;N;i:573;s:44:"		<input name="submit" type="submit" value="";i:574;s:2:"";i:575;s:5:"close";i:576;N;i:577;N;i:578;s:3:"">
+";i:579;s:2:"";i:580;N;i:581;N;i:582;N;i:583;s:109:"</form>
+<form method="post" action="index.php?whattodo=printjob">
+	<input name="submit" type="submit" value="";i:584;s:2:"";i:585;s:9:"printable";i:586;N;i:587;N;i:588;s:64:"">
+</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="3">";i:589;s:2:"";i:590;s:5:"title";i:591;N;i:592;N;i:593;s:3:" - ";i:594;s:2:"";i:595;s:6:"events";i:596;N;i:597;N;i:598;s:13:"
+	<tr>
+		<th>";i:599;s:2:"";i:600;s:11:"description";i:601;N;i:602;N;i:603;s:7:"
+		<th>";i:604;s:2:"";i:605;s:8:"added by";i:606;N;i:607;N;i:608;s:7:"
+		<th>";i:609;s:2:"";i:610;s:4:"date";i:611;N;i:612;N;i:613;s:8:"
+	</tr>
+";i:614;s:2:"";i:615;s:6:"events";i:616;N;i:617;N;i:618;s:33:"		<tr>
+			<td align="left">&nbsp;";i:619;s:2:"";i:620;s:11:"description";i:621;s:0:"";i:622;N;i:623;s:7:"			<td>";i:624;s:2:"";i:625;s:8:"added_by";i:626;N;i:627;N;i:628;s:7:"			<td>";i:629;s:2:"";i:630;s:4:"date";i:631;N;i:632;N;i:633;s:9:"		</tr>	
+";i:634;s:2:"";i:635;N;i:636;N;i:637;N;i:638;s:61:"	<form method="post" action="index.php?whattodo=addevent&tid=";i:639;s:2:"";i:640;s:3:"tid";i:641;N;i:642;N;i:643;s:44:"">
+		<input name="tid" type="hidden" value="";i:644;s:2:"";i:645;s:3:"tid";i:646;N;i:647;N;i:648;s:129:"">
+		<tr><td colspan="3"><textarea name="description" cols="100"></textarea><br />
+		<input name="added_by" type="hidden" value="";i:649;s:2:"";i:650;s:8:"added_by";i:651;N;i:652;N;i:653;s:99:"">
+		<input name="commit" type="hidden" value="event">
+		<input name="submit" type="submit" value="";i:654;s:2:"";i:655;s:9:"New Event";i:656;N;i:657;N;i:658;s:65:"">
+	</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="3">";i:659;s:2:"";i:660;s:5:"title";i:661;N;i:662;N;i:663;s:3:" - ";i:664;s:2:"";i:665;s:5:"files";i:666;N;i:667;N;i:668;s:2:"	
+";i:669;s:2:"";i:670;s:5:"files";i:671;N;i:672;N;i:673;s:39:"		<tr><td><a href="javascript:OpenNew('";i:674;s:2:"";i:675;s:4:"link";i:676;s:4:"NONE";i:677;N;i:678;s:4:"')">";i:679;s:2:"";i:680;s:4:"name";i:681;N;i:682;N;i:683;s:5:"</a>
+";i:684;s:2:"";i:685;N;i:686;N;i:687;N;i:688;s:106:"	<tr><td>
+	<form method="post"enctype="multipart/form-data" action="index.php?whattodo=addfile&dir=ticket/";i:689;s:2:"";i:690;s:3:"tid";i:691;N;i:692;N;i:693;s:54:"">
+		<input type="hidden" name="MAX_FILE_SIZE" value="";i:694;s:2:"";i:695;s:13:"max_file_size";i:696;N;i:697;N;i:698;s:79:"">
+		<input type="file" name="userfile" size=10>
+		<input type="submit" value="";i:699;s:2:"";i:700;s:6:"upload";i:701;N;i:702;N;i:703;s:65:"">
+	</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="4">";i:704;s:2:"";i:705;s:5:"title";i:706;N;i:707;N;i:708;s:3:" - ";i:709;s:2:"";i:710;s:5:"mails";i:711;N;i:712;N;i:713;s:13:"
+	<tr>
+		<th>";i:714;s:2:"";i:715;s:4:"from";i:716;N;i:717;N;i:718;s:7:"
+		<th>";i:719;s:2:"";i:720;s:2:"to";i:721;N;i:722;N;i:723;s:7:"
+		<th>";i:724;s:2:"";i:725;s:4:"date";i:726;N;i:727;N;i:728;s:7:"
+		<th>";i:729;s:2:"";i:730;s:7:"subject";i:731;N;i:732;N;i:733;s:1:"
+";i:734;s:2:"";i:735;s:5:"mails";i:736;N;i:737;N;i:738;s:188:"		<tr onmouseover="javascript:style.background='#CCCCCC'"
+   	 onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:OpenNew('index.php?whattodo=showmails&msgnum=";i:739;s:2:"";i:740;s:6:"msgnum";i:741;N;i:742;N;i:743;s:12:"')">
+			<td>";i:744;s:2:"";i:745;s:4:"from";i:746;N;i:747;N;i:748;s:7:"			<td>";i:749;s:2:"";i:750;s:2:"to";i:751;N;i:752;N;i:753;s:7:"			<td>";i:754;s:2:"";i:755;s:4:"date";i:756;N;i:757;N;i:758;s:7:"			<td>";i:759;s:2:"";i:760;s:7:"subject";i:761;N;i:762;N;i:763;s:2:"";i:764;N;i:765;N;i:766;N;i:767;s:9:"</table>
+";i:768;s:2:"";i:769;s:7:"taskbar";i:770;N;i:771;N;i:772;s:2:"";i:773;s:5:"links";i:774;N;i:775;N;i:776;s:11:"		<a href="";i:777;s:2:"";i:778;s:4:"link";i:779;s:4:"NONE";i:780;N;i:781;s:2:"">";i:782;s:2:"";i:783;s:5:"title";i:784;N;i:785;N;i:786;s:5:"</a>
+";i:787;s:2:"";i:788;N;i:789;N;i:790;N;i:791;s:2:"";i:792;N;i:793;N;i:794;N;i:795;s:2:"";i:796;s:6:"stderr";i:797;N;i:798;N;i:799;s:29:"	<hr>
+	<h3><font color='red'>";i:800;s:2:"";i:801;s:6:"stderr";i:802;N;i:803;N;i:804;s:13:"</font></h3>
+";i:805;s:2:"";i:806;N;i:807;N;i:808;N;i:809;s:186:"</div>
+<script language="JavaScript" id="calendar">
+<!--
+			var cal = new CalendarPopup();
+			cal.showYearNavigation();
+			cal.showYearNavigationInput();
+//-->
+</script>
+</body>
+</html>
+";}s:15:"_compile_params";a:5:{i:0;b:1;i:1;i:5;i:2;b:1;i:3;b:1;i:4;a:0:{}}s:6:"_mtime";i:1110976671;s:15:"_include_mtimes";a:3:{s:30:"themes/default/inc/header.html";i:1124115320;s:28:"themes/default/inc/menu.html";i:1124116557;s:30:"themes/default/inc/footer.html";i:1108133880;}}

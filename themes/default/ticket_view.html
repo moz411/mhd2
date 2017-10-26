@@ -1,0 +1,28 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<table class="tickets">
+	<tr>
+		<TMPL_LOOP columns>
+			<td><a href="<TMPL_VAR url ESCAPE="NONE">"><TMPL_VAR name></a>
+		</TMPL_LOOP>
+	</tr>
+	<TMPL_LOOP tickets>
+		<tr onmouseover="javascript:style.background='#CCCCCC'"
+    	onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:window.location.href='index.php?whattodo=viewjobs&tid=<TMPL_VAR id>'">
+			<td><TMPL_VAR id>
+			<td><TMPL_VAR customer>
+			<td><TMPL_VAR summary>
+			<td><TMPL_VAR category>
+			<td bgcolor="<TMPL_VAR priority_color>"><TMPL_VAR priority>
+			<td><TMPL_VAR opened_by>
+			<td><TMPL_VAR assigned_to>
+			<td><TMPL_DATE date_opened>
+			<td bgcolor="<TMPL_VAR date_updated_color>"><TMPL_VAR date_updated>
+			<td><TMPL_IF date_closed><TMPL_DATE date_closed></TMPL_IF>
+			<TMPL_IF status><td><TMPL_VAR status></TMPL_IF>
+		</tr>
+	</TMPL_LOOP>
+</table>
+
+<TMPL_INCLUDE NAME="footer.html">

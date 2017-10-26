@@ -1,0 +1,25 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<table class="tickets">
+	<tr>
+		<TMPL_LOOP columns>
+			<td><a href="<TMPL_VAR url ESCAPE="NONE">"><TMPL_VAR name></a>
+		</TMPL_LOOP>
+	</tr>
+	<TMPL_LOOP contacts>
+		<tr onmouseover="javascript:style.background='#CCCCCC'"
+    	onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:window.location.href='index.php?whattodo=viewcontacts&uid=<TMPL_VAR uid>'">
+			<td><TMPL_VAR uid>
+			<td><TMPL_VAR firstname>
+			<td><TMPL_VAR lastname>
+			<td><TMPL_VAR customer>
+			<td><TMPL_VAR phone>
+			<td><TMPL_VAR email>
+			<td><TMPL_VAR fax>
+			<td><TMPL_VAR job>
+		</tr>
+	</TMPL_LOOP>
+</table>
+
+<TMPL_INCLUDE NAME="footer.html">

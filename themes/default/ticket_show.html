@@ -1,0 +1,94 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form method="post" action="index.php?whattodo=addjob">
+<table class="tickets">
+	<th colspan="2"><TMPL_VAR title>
+	<TMPL_LOOP customer>
+		<tr><td>[[customer]]<td><a href="index.php?whattodo=viewcustomers&cid=<TMPL_VAR cid>"><TMPL_VAR name></a>
+		<input name="cid" type="hidden" value="<TMPL_VAR cid>">
+	</TMPL_LOOP>
+	<TMPL_LOOP contact>
+		<tr><td>[[contact]]<td><TMPL_VAR firstname> <TMPL_VAR lastname>
+		<tr><td>[[phone]]<td><TMPL_VAR phone>
+		<tr><td>[[email]]<td><a href="mailto:<TMPL_VAR email>?subject=<TMPL_VAR subject ESCAPE=\"URL\">"><TMPL_VAR email></a>
+		<input name="uid" type="hidden" value="<TMPL_VAR uid>">
+	</TMPL_LOOP>
+	<TMPL_LOOP ticket>
+		<tr><td>[[summary]]<td><TMPL_VAR summary>
+		<tr><td>[[detail]]<td><TMPL_TEXTAREA detail>
+		<tr><td>[[category]]<td><TMPL_VAR category>
+		<tr><td>[[item]]<td><TMPL_VAR item_designation><TMPL_IF item_sn> SN :<TMPL_VAR item_sn></TMPL_IF>
+		<tr><td>[[opened by]]<td><TMPL_VAR opened_by>
+		<tr><td>[[assigned to]]<td><TMPL_VAR assigned_to>
+	</TMPL_LOOP>
+	<TMPL_LOOP priority>
+		<tr><td>[[priority]]<td bgcolor="<TMPL_VAR color>"><TMPL_VAR text>
+	</TMPL_LOOP>
+	<tr><td colspan="2">
+	<input name="tid" type="hidden" value="<TMPL_VAR tid>">
+	<input name="submit" type="submit" value="[[modify]]">
+	<TMPL_IF close>
+		<input name="submit" type="submit" value="[[reopen]]">
+	<TMPL_ELSE>
+		<input name="submit" type="submit" value="[[close]]">
+	</TMPL_IF>
+</form>
+<form method="post" action="index.php?whattodo=printjob">
+	<input name="submit" type="submit" value="[[printable]]">
+</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="3"><TMPL_VAR title> - [[events]]
+	<tr>
+		<th>[[description]]
+		<th>[[added by]]
+		<th>[[date]]
+	</tr>
+	<TMPL_LOOP events>
+		<tr>
+			<td align="left">&nbsp;<TMPL_TEXTAREA description>
+			<td><TMPL_VAR added_by>
+			<td><TMPL_DATE date>
+		</tr>	
+	</TMPL_LOOP>
+	<form method="post" action="index.php?whattodo=addevent&tid=<TMPL_VAR tid>">
+		<input name="tid" type="hidden" value="<TMPL_VAR tid>">
+		<tr><td colspan="3"><textarea name="description" cols="100"></textarea><br />
+		<input name="added_by" type="hidden" value="<TMPL_VAR added_by>">
+		<input name="commit" type="hidden" value="event">
+		<input name="submit" type="submit" value="[[New Event]]">
+	</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="3"><TMPL_VAR title> - [[files]]	
+	<TMPL_LOOP files>
+		<tr><td><a href="javascript:OpenNew('<TMPL_VAR link ESCAPE="NONE">')"><TMPL_VAR name></a>
+	</TMPL_LOOP>
+	<tr><td>
+	<form method="post"enctype="multipart/form-data" action="index.php?whattodo=addfile&dir=ticket/<TMPL_VAR tid>">
+		<input type="hidden" name="MAX_FILE_SIZE" value="<TMPL_VAR max_file_size>">
+		<input type="file" name="userfile" size=10>
+		<input type="submit" value="[[upload]]">
+	</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="4"><TMPL_VAR title> - [[mails]]
+	<tr>
+		<th>[[from]]
+		<th>[[to]]
+		<th>[[date]]
+		<th>[[subject]]
+	<TMPL_LOOP mails>
+		<tr onmouseover="javascript:style.background='#CCCCCC'"
+   	 onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:OpenNew('index.php?whattodo=showmails&msgnum=<TMPL_VAR msgnum>')">
+			<td><TMPL_VAR from>
+			<td><TMPL_VAR to>
+			<td><TMPL_VAR date>
+			<td><TMPL_VAR subject>
+	</TMPL_LOOP>
+</table>
+<TMPL_INCLUDE NAME="footer.html">

@@ -1,0 +1,127 @@
+body {
+	text-align: center;
+	font-size: 12px;	
+	margin-left: 10;
+	margin-right: 10;
+	margin-top: 10;
+	margin-bottom: 10;
+	padding : 0;
+	border-style: groove;
+	background: url(images/degrade.png);
+	font-family: Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+
+table {
+	width: 95%;
+	margin-left: auto; 
+	margin-right: auto;
+	background-color: #f4f4f4;
+	border: outset 5pt;
+	border-spacing: 1pt;
+}
+
+table * th {
+	border: outset 1px;
+	font-weight: bold;
+	color: #c60;
+	background-color:#efefef
+}
+
+table * td {
+	border: inset 1px;
+ 	padding: 1px;
+}
+
+table.tickets {
+}
+
+table.tickets * th {
+}
+
+table.tickets * td {
+}
+
+table.events {
+	width: 95%;
+	margin-left: auto; 
+	margin-right: auto;
+	background-color: #f4f4f4;
+	border: outset 5pt;
+	border-spacing: 1pt;
+}
+
+table.events * th {
+}
+
+table.events * td {
+}
+
+input.searchbutton {
+	background-color: #efefef;
+ 	font-size: 10px;
+	}
+
+input {
+	border: 1px #999 solid;
+	padding: 1px;
+	background: #fff;
+	color: #c60;
+	font-size: 11px;
+	}
+
+a { 
+	color: #c60;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div.taskbar {  
+	width: 95%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	text-align: left
+}
+
+#nav, #nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#nav a {
+	display: block;
+	width: 8em;
+}
+
+#nav li {
+	float: left;
+	width: 7em;
+	height: 15px;
+}
+
+#nav li.search{
+	float: right;
+	width: 7em;
+	height: 30px;
+}
+
+#nav li ul {
+	position: absolute;
+	width: 8em;
+	left: -999em;
+}
+
+#nav li:hover ul {
+	left: auto;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li.sfhover ul ul, #nav li.sfhover ul ul ul {
+	left: -999em;
+}
+
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul {
+	left: auto;
+}
+

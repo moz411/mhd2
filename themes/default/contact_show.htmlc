@@ -1,0 +1,97 @@
+O:8:"template":6:{s:8:"_version";d:1.20999999999999996447286321199499070644378662109375;s:5:"_file";s:32:"themes/default/contact_show.html";s:7:"_tokens";a:502:{i:0;s:30:"<?xml version="1.0" encoding="";i:1;s:2:"";i:2;s:8:"encoding";i:3;N;i:4;N;i:5;s:230:""?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta HTTP-EQUIV="content-type" CONTENT="text/html;charset=";i:6;s:2:"";i:7;s:8:"encoding";i:8;N;i:9;N;i:10;s:3:"">
+";i:11;s:2:"";i:12;s:7:"timeout";i:13;N;i:14;N;i:15;s:38:"		<META HTTP-EQUIV="Refresh" CONTENT="";i:16;s:2:"";i:17;s:7:"timeout";i:18;N;i:19;N;i:20;s:3:"">
+";i:21;s:2:"";i:22;N;i:23;N;i:24;N;i:25;s:62:"		<link rel="stylesheet" type="text/css" media="screen" href="";i:26;s:2:"";i:27;s:9:"theme_url";i:28;N;i:29;N;i:30;s:23:"/mhd2.css" />
+		<title>";i:31;s:2:"";i:32;s:5:"title";i:33;N;i:34;N;i:35;s:305:"</title>
+		<META HTTP-EQUIV="Expires" CONTENT="0">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+
+<script language="JavaScript" src="include/functions.js"></script> 
+<script language="JavaScript" src="libraries/CalendarPopup.js"></script>
+
+</head>
+";i:36;s:2:"";i:37;s:5:"close";i:38;N;i:39;N;i:40;s:31:"<BODY onLoad="changeparent()">
+";i:41;s:2:"";i:42;N;i:43;N;i:44;N;i:45;s:1:"
+";i:46;s:2:"";i:47;s:7:"taskbar";i:48;N;i:49;N;i:50;s:27:"	<body>
+	<div id="centre">
+";i:51;s:2:"";i:52;s:7:"taskbar";i:53;N;i:54;N;i:55;s:2:"";i:56;s:4:"menu";i:57;N;i:58;N;i:59;s:14:"<ul id="nav">
+";i:60;s:2:"";i:61;s:8:"viewjobs";i:62;N;i:63;N;i:64;s:56:"	<li class="pict"><a href="index.php?whattodo=viewjobs">";i:65;s:2:"";i:66;s:7:"Tickets";i:67;N;i:68;N;i:69;s:12:"</a>
+		<ul>
+";i:70;s:2:"";i:71;s:6:"addjob";i:72;N;i:73;N;i:74;s:43:"			<li><a href="index.php?whattodo=addjob">";i:75;s:2:"";i:76;s:10:"add ticket";i:77;N;i:78;N;i:79;s:10:"</a></li>
+";i:80;s:2:"";i:81;N;i:82;N;i:83;N;i:84;s:15:"		</ul>
+	</li>
+";i:85;s:2:"";i:86;N;i:87;N;i:88;N;i:89;s:2:"";i:90;s:13:"viewcustomers";i:91;N;i:92;N;i:93;s:61:"	<li class="pict"><a href="index.php?whattodo=viewcustomers">";i:94;s:2:"";i:95;s:9:"Customers";i:96;N;i:97;N;i:98;s:12:"</a>
+		<ul>
+";i:99;s:2:"";i:100;s:11:"addcustomer";i:101;N;i:102;N;i:103;s:48:"			<li><a href="index.php?whattodo=addcustomer">";i:104;s:2:"";i:105;s:12:"add customer";i:106;N;i:107;N;i:108;s:10:"</a></li>
+";i:109;s:2:"";i:110;N;i:111;N;i:112;N;i:113;s:15:"		</ul>
+	</li>
+";i:114;s:2:"";i:115;N;i:116;N;i:117;N;i:118;s:2:"";i:119;s:13:"viewcontracts";i:120;N;i:121;N;i:122;s:61:"	<li class="pict"><a href="index.php?whattodo=viewcontracts">";i:123;s:2:"";i:124;s:9:"Contracts";i:125;N;i:126;N;i:127;s:12:"</a>
+		<ul>
+";i:128;s:2:"";i:129;s:11:"addcontract";i:130;N;i:131;N;i:132;s:48:"			<li><a href="index.php?whattodo=addcontract">";i:133;s:2:"";i:134;s:12:"add contract";i:135;N;i:136;N;i:137;s:10:"</a></li>
+";i:138;s:2:"";i:139;N;i:140;N;i:141;N;i:142;s:15:"		</ul>
+	</li>
+";i:143;s:2:"";i:144;N;i:145;N;i:146;N;i:147;s:2:"";i:148;s:12:"viewcontacts";i:149;N;i:150;N;i:151;s:60:"	<li class="pict"><a href="index.php?whattodo=viewcontacts">";i:152;s:2:"";i:153;s:8:"Contacts";i:154;N;i:155;N;i:156;s:12:"</a>
+		<ul>
+";i:157;s:2:"";i:158;s:10:"addcontact";i:159;N;i:160;N;i:161;s:47:"			<li><a href="index.php?whattodo=addcontact">";i:162;s:2:"";i:163;s:11:"add contact";i:164;N;i:165;N;i:166;s:10:"</a></li>
+";i:167;s:2:"";i:168;N;i:169;N;i:170;N;i:171;s:15:"		</ul>
+	</li>
+";i:172;s:2:"";i:173;N;i:174;N;i:175;N;i:176;s:2:"";i:177;s:7:"booking";i:178;N;i:179;N;i:180;s:55:"	<li class="pict"><a href="index.php?whattodo=booking">";i:181;s:2:"";i:182;s:7:"Booking";i:183;N;i:184;N;i:185;s:10:"</a></li>
+";i:186;s:2:"";i:187;N;i:188;N;i:189;N;i:190;s:2:"";i:191;s:8:"viewdocs";i:192;N;i:193;N;i:194;s:65:"	<li class="pict"><a href="docs/TODO_CALLS.html" target="_blank">";i:195;s:2:"";i:196;s:4:"Docs";i:197;N;i:198;N;i:199;s:10:"</a></li>
+";i:200;s:2:"";i:201;N;i:202;N;i:203;N;i:204;s:2:"";i:205;s:5:"stats";i:206;N;i:207;N;i:208;s:53:"	<li class="pict"><a href="index.php?whattodo=stats">";i:209;s:2:"";i:210;s:10:"Statistics";i:211;N;i:212;N;i:213;s:10:"</a></li>
+";i:214;s:2:"";i:215;N;i:216;N;i:217;N;i:218;s:2:"";i:219;s:6:"config";i:220;N;i:221;N;i:222;s:54:"	<li class="pict"><a href="index.php?whattodo=config">";i:223;s:2:"";i:224;s:13:"Configuration";i:225;N;i:226;N;i:227;s:12:"</a>
+		<ul>
+";i:228;s:2:"";i:229;s:5:"users";i:230;N;i:231;N;i:232;s:42:"			<li><a href="index.php?whattodo=users">";i:233;s:2:"";i:234;s:5:"users";i:235;N;i:236;N;i:237;s:10:"</a></li>
+";i:238;s:2:"";i:239;N;i:240;N;i:241;N;i:242;s:2:"";i:243;s:6:"groups";i:244;N;i:245;N;i:246;s:43:"			<li><a href="index.php?whattodo=groups">";i:247;s:2:"";i:248;s:6:"groups";i:249;N;i:250;N;i:251;s:10:"</a></li>
+";i:252;s:2:"";i:253;N;i:254;N;i:255;N;i:256;s:15:"		</ul>
+	</li>
+";i:257;s:2:"";i:258;N;i:259;N;i:260;N;i:261;s:2:"";i:262;s:6:"search";i:263;N;i:264;N;i:265;s:54:"	<li class="pict"><a href="index.php?whattodo=search">";i:266;s:2:"";i:267;s:6:"Search";i:268;N;i:269;N;i:270;s:10:"</a></li>
+";i:271;s:2:"";i:272;N;i:273;N;i:274;N;i:275;s:2:"";i:276;s:6:"logout";i:277;N;i:278;N;i:279;s:54:"	<li class="pict"><a href="index.php?whattodo=logout">";i:280;s:2:"";i:281;s:6:"Logout";i:282;N;i:283;N;i:284;s:10:"</a></li>
+";i:285;s:2:"";i:286;N;i:287;N;i:288;N;i:289;s:2:"";i:290;s:8:"viewjobs";i:291;N;i:292;N;i:293;s:229:"	<li class="search">
+		<form method=GET>
+			<input type="hidden" name="whattodo" value="viewjobs">
+		# <input type="text" class="searchbutton" size="3" name="tid" value="" OnChange="submit()" OnFocus="value=''">
+		</form>
+	</li>
+";i:294;s:2:"";i:295;N;i:296;N;i:297;N;i:298;s:2:"";i:299;s:6:"search";i:300;N;i:301;N;i:302;s:262:"	<li class="search">
+		<form action="index.php?whattodo=search" method="POST">
+			<input type="hidden" name="table" value="tickets">
+			<input type="hidden" name="column" value="summary">
+			<input type="text" class="searchbutton" size="15" name="string" value="";i:303;s:2:"";i:304;s:6:"Search";i:305;N;i:306;N;i:307;s:59:"" OnChange="submit()" OnFocus="value=''">
+		</form>
+	</li>
+";i:308;s:2:"";i:309;N;i:310;N;i:311;N;i:312;s:6:"</ul>
+";i:313;s:2:"";i:314;N;i:315;N;i:316;N;i:317;s:2:"";i:318;N;i:319;N;i:320;N;i:321;s:20:"	<br /><br /><br />
+";i:322;s:2:"";i:323;s:5:"links";i:324;N;i:325;N;i:326;s:11:"		<a href="";i:327;s:2:"";i:328;s:4:"link";i:329;s:4:"NONE";i:330;N;i:331;s:2:"">";i:332;s:2:"";i:333;s:5:"title";i:334;N;i:335;N;i:336;s:5:"</a>
+";i:337;s:2:"";i:338;N;i:339;N;i:340;N;i:341;s:2:"	
+";i:342;s:2:"";i:343;N;i:344;N;i:345;N;i:346;s:33:"	<BODY onLoad="fitWindowSize()">
+";i:347;s:2:"";i:348;N;i:349;N;i:350;N;i:351;s:102:"
+<form method="post" action="index.php?whattodo=addcontact">
+<table class="tickets">
+	<th colspan="2">";i:352;s:2:"";i:353;s:5:"title";i:354;N;i:355;N;i:356;s:2:"";i:357;s:7:"contact";i:358;N;i:359;N;i:360;s:10:"		<tr><td>";i:361;s:2:"";i:362;s:9:"firstname";i:363;N;i:364;N;i:365;s:4:"<td>";i:366;s:2:"";i:367;s:9:"firstname";i:368;N;i:369;N;i:370;s:10:"		<tr><td>";i:371;s:2:"";i:372;s:8:"lastname";i:373;N;i:374;N;i:375;s:4:"<td>";i:376;s:2:"";i:377;s:8:"lastname";i:378;N;i:379;N;i:380;s:10:"		<tr><td>";i:381;s:2:"";i:382;s:8:"customer";i:383;N;i:384;N;i:385;s:4:"<td>";i:386;s:2:"";i:387;s:13:"customer_name";i:388;N;i:389;N;i:390;s:10:"		<tr><td>";i:391;s:2:"";i:392;s:5:"phone";i:393;N;i:394;N;i:395;s:4:"<td>";i:396;s:2:"";i:397;s:5:"phone";i:398;N;i:399;N;i:400;s:10:"		<tr><td>";i:401;s:2:"";i:402;s:5:"email";i:403;N;i:404;N;i:405;s:4:"<td>";i:406;s:2:"";i:407;s:5:"email";i:408;N;i:409;N;i:410;s:10:"		<tr><td>";i:411;s:2:"";i:412;s:3:"fax";i:413;N;i:414;N;i:415;s:4:"<td>";i:416;s:2:"";i:417;s:3:"fax";i:418;N;i:419;N;i:420;s:12:"	
+		<tr><td>";i:421;s:2:"";i:422;s:7:"address";i:423;N;i:424;N;i:425;s:4:"<td>";i:426;s:2:"";i:427;s:7:"address";i:428;N;i:429;N;i:430;s:10:"		<tr><td>";i:431;s:2:"";i:432;s:3:"job";i:433;N;i:434;N;i:435;s:4:"<td>";i:436;s:2:"";i:437;s:3:"job";i:438;N;i:439;N;i:440;s:2:"";i:441;N;i:442;N;i:443;N;i:444;s:62:"	<tr><td colspan="2">
+	<input name="uid" type="hidden" value="";i:445;s:2:"";i:446;s:3:"uid";i:447;N;i:448;N;i:449;s:43:"">
+	<input name="cid" type="hidden" value="";i:450;s:2:"";i:451;s:3:"cid";i:452;N;i:453;N;i:454;s:46:"">
+	<input name="submit" type="submit" value="";i:455;s:2:"";i:456;s:6:"modify";i:457;N;i:458;N;i:459;s:22:"">	
+</table>
+</form>
+
+";i:460;s:2:"";i:461;s:7:"taskbar";i:462;N;i:463;N;i:464;s:2:"";i:465;s:5:"links";i:466;N;i:467;N;i:468;s:11:"		<a href="";i:469;s:2:"";i:470;s:4:"link";i:471;s:4:"NONE";i:472;N;i:473;s:2:"">";i:474;s:2:"";i:475;s:5:"title";i:476;N;i:477;N;i:478;s:5:"</a>
+";i:479;s:2:"";i:480;N;i:481;N;i:482;N;i:483;s:2:"";i:484;N;i:485;N;i:486;N;i:487;s:2:"";i:488;s:6:"stderr";i:489;N;i:490;N;i:491;s:29:"	<hr>
+	<h3><font color='red'>";i:492;s:2:"";i:493;s:6:"stderr";i:494;N;i:495;N;i:496;s:13:"</font></h3>
+";i:497;s:2:"";i:498;N;i:499;N;i:500;N;i:501;s:186:"</div>
+<script language="JavaScript" id="calendar">
+<!--
+			var cal = new CalendarPopup();
+			cal.showYearNavigation();
+			cal.showYearNavigationInput();
+//-->
+</script>
+</body>
+</html>
+";}s:15:"_compile_params";a:5:{i:0;b:1;i:1;i:5;i:2;b:1;i:3;b:1;i:4;a:0:{}}s:6:"_mtime";i:1106815706;s:15:"_include_mtimes";a:3:{s:30:"themes/default/inc/header.html";i:1124115320;s:28:"themes/default/inc/menu.html";i:1124116557;s:30:"themes/default/inc/footer.html";i:1108133880;}}

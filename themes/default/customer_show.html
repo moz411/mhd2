@@ -1,0 +1,76 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form method="post" action="index.php?whattodo=addcustomer">
+<table class="tickets">
+	<th colspan="2"><TMPL_VAR title>
+	<TMPL_LOOP customer>
+		<tr><td>[[name]]<td><TMPL_VAR name>
+		<tr><td>[[phone]]<td><TMPL_VAR phone>
+		<tr><td>[[fax]]<td><TMPL_VAR fax>
+		<tr><td>[[email]]<td><TMPL_VAR email>	
+		<tr><td>[[address]]<td><TMPL_VAR address>
+		<tr><td>[[type]]<td><TMPL_VAR type>
+		<tr><td>[[comments]]<td><TMPL_TEXTAREA comments>
+		<tr><td>[[logo]]<td><TMPL_VAR logo>
+	</TMPL_LOOP>
+	<tr><td>[[administrative contact]]<td><TMPL_VAR administrative_contact_firstname>	<TMPL_VAR administrative_contact_lastname>	
+	<tr><td>[[technical_contact]]<td><TMPL_VAR technical_contact_firstname>	<TMPL_VAR technical_contact_lastname>	
+	<tr><td>[[IC]]<td><TMPL_VAR IC_firstname> <TMPL_VAR IC_lastname>
+	<tr><td>[[ITC]]<td><TMPL_VAR ITC_firstname> <TMPL_VAR ITC_lastname>
+	<tr><td colspan="2">
+	<input name="cid" type="hidden" value="<TMPL_VAR cid>">
+	<input name="submit" type="submit" value="[[modify]]">
+</table>
+</form>
+
+<p>
+<table class="events">
+	<th colspan="4"><TMPL_VAR title> - [[contracts]]
+	<tr>
+		<th>[[id]]
+		<th>[[number]]
+		<th>[[start date]]
+		<th>[[end date]]
+	<TMPL_LOOP contracts>
+		<tr onmouseover="javascript:style.background='#CCCCCC'"
+   	 onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:window.location.href='index.php?whattodo=viewcontracts&contractid=<TMPL_VAR id>'">
+			<td><TMPL_VAR id>
+			<td><TMPL_VAR number>
+			<td><TMPL_VAR start_date>
+			<td><TMPL_VAR end_date>
+	</TMPL_LOOP>
+</table>
+<p>
+<table class="events">
+	<th colspan="3"><TMPL_VAR title> - [[files]]	
+	<TMPL_LOOP files>
+		<tr><td><a href="javascript:OpenNew('<TMPL_VAR link ESCAPE="NONE">')"><TMPL_VAR name></a>
+	</TMPL_LOOP>
+	<tr><td>
+	<form method="post"enctype="multipart/form-data" action="index.php?whattodo=addfile&dir=customer/<TMPL_VAR cid>">
+		<input type="hidden" name="MAX_FILE_SIZE" value="<TMPL_VAR max_file_size>">
+		<input type="file" name="userfile" size=10>
+		<input type="submit" value="[[upload]]">
+	</form>
+</table>
+<p>
+<table class="events">
+	<th colspan="4"><TMPL_VAR title> - [[mails]]
+	<tr>
+		<th>[[from]]
+		<th>[[to]]
+		<th>[[date]]
+		<th>[[subject]]
+	<TMPL_LOOP mails>
+		<tr onmouseover="javascript:style.background='#CCCCCC'"
+   	 onmouseout="javascript:style.background='#f4f4f4'"
+    	onmousedown="javascript:OpenNew('index.php?whattodo=showmails&msgnum=<TMPL_VAR msgnum>')">
+			<td><TMPL_VAR from>
+			<td><TMPL_VAR to>
+			<td><TMPL_VAR date>
+			<td><TMPL_VAR subject>
+	</TMPL_LOOP>
+</table>
+
+<TMPL_INCLUDE NAME="footer.html">

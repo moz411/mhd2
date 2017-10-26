@@ -1,0 +1,121 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<script language="Javascript"> 
+
+var selected_rights = new Array(); 
+var not_selected_rights = new Array();
+ 
+<TMPL_LOOP selected_rights>
+selected_rights[<TMPL_VAR __PASS__>]	= '<TMPL_VAR group>|<TMPL_VAR right>' 
+</TMPL_LOOP>
+
+<TMPL_LOOP not_selected_rights>
+not_selected_rights[<TMPL_VAR __PASS__>]	= '<TMPL_VAR group>|<TMPL_VAR right>' 
+</TMPL_LOOP>
+
+ 
+function populateData(name) {
+ 
+	select	= document.groups.selected_rights; 
+	string	= "";
+	count	= 0;
+	select.options.length = count; 
+	for( i = 1; i < selected_rights.length; i++ ) { 
+		string = selected_rights[i].split( "|" ); 
+		if( string[0] == name ) { 
+			select.options[count++] = new Option( string[1] ); 
+			}
+		}
+ 
+	select	= document.groups.not_selected_rights; 
+	string	= "";
+	count	= 0;
+	select.options.length = count; 
+	for( i = 1; i < not_selected_rights.length; i++ ) { 
+		string = not_selected_rights[i].split( "|" ); 
+		if( string[0] == name ) { 
+			select.options[count++] = new Option( string[1] ); 
+			}
+		}
+	}
+
+function moveData(from,to) {
+	selected_list = eval('document.groups.' + from);
+	not_selected_list = eval('document.groups.' + to);
+	var sel = false;
+	for (i=0;i<from.length;i++) {
+		var current = selected_list.options[i];
+		if (current.selected) {
+			sel = true;
+			txt = current.text;
+			val = current.value;
+			not_selected_list.options[not_selected_list.length] = new Option(txt,val);
+			selected_list.options[i] = null;
+			i--;
+			}
+		}
+	}
+
+function allSelect() {
+	List = document.groups.selected_rights;
+	for (i=0;i<List.length;i++) {
+		List.options[i].selected = true;
+  		}
+	List = document.groups.not_selected_rights;
+	for (i=0;i<List.length;i++) {
+		List.options[i].selected = true;
+  		}
+	return document.groups.selected_rights;
+	}
+	
+</script>
+
+<table class="tickets">
+<form name="groups" method="post" action="index.php?whattodo=groups" onSubmit="allSelect() ">
+<th colspan="3"><TMPL_VAR title>
+	<tr>
+		<td>[[name]]
+		<td>[[selected rights]]
+		<td>[[not selected rights]]
+	</tr>
+<tr><td>
+	<TMPL_SELECT name | size="5" onChange='javascript:populateData(this.options[selectedIndex].text)'>
+</td>
+<td>
+	<select name="selected_rights[]" id="selected_rights" size="15" multiple> 
+	</select><br/><br/>
+	<a href="javascript:moveData('selected_rights','not_selected_rights')">=&gt;</a>
+</td>
+<td>
+	<select name="not_selected_rights[]" id="not_selected_rights" size="15" multiple> 
+	</select><br/><br/>
+	<a href="javascript:moveData('not_selected_rights','selected_rights')">&lt;=</a>
+</td></tr>
+<tr>
+<td colspan="3">
+<input name="submit" type="submit" value="[[apply]]">
+</td>
+</form>
+</table>
+
+<p>
+
+<table class="tickets">
+<form name="addgroup" method="post" action="index.php?whattodo=groups">
+<th colspan="2"><TMPL_VAR title>
+	<tr>
+		<td>[[name]]
+		<td>[[selected rights]]
+	</tr>
+<tr><td>
+	<TMPL_TEXT group_name | size="20">
+</td>
+<td>
+	<TMPL_SELECT check_rights[] | size="15" multiple>
+</td>
+</tr><tr>
+<td colspan="2">
+	<input name="submit" type="submit" value="[[add]]">
+</td>
+</form>
+</table>

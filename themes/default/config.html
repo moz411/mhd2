@@ -1,0 +1,47 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form name="config" method="post" action="index.php?whattodo=config">
+<TMPL_LOOP Settings>
+<table class="tickets">
+<tr><td>[[base URL]]<td><TMPL_TEXT base_url>[1]
+<tr><td>[[title]]<td><TMPL_TEXT title>
+<tr><td>[[version]]<td><TMPL_TEXT version>
+<tr><td>[[locale]]<td><TMPL_TEXT locale>[2]
+<tr><td>[[encoding]]<td><TMPL_TEXT encoding>[3]
+<tr><td>[[theme]]<td><TMPL_SELECT theme>
+<tr><td>[[contact database]]<td><TMPL_SELECT contact_db>
+<tr><td>[[ldap host]]<td><TMPL_TEXT ldap_host>[4]
+<tr><td>[[ldap tree]]<td><TMPL_TEXT ldap_tree>[4]
+<tr><td>[[ldap user]]<td><TMPL_TEXT ldap_user>[4]
+<tr><td>[[ldap password]]<td><TMPL_TEXT ldap_password>[4]
+<tr><td>[[webdav host]]<td><TMPL_TEXT webdav_host>[5]
+<tr><td>[[webdav user]]<td><TMPL_TEXT webdav_user>[5]
+<tr><td>[[webdav password]]<td><TMPL_TEXT webdav_password>[5]
+<tr><td>[[mail host]]<td><TMPL_TEXT mail_host>[6]
+<tr><td>[[mail user]]<td><TMPL_TEXT mail_user>[6]
+<tr><td>[[mail password]]<td><TMPL_TEXT mail_password>[6]
+<tr><td>[[documentation directory]]<td><TMPL_TEXT doc_dir>[7]
+<tr><td>[[range]]<td><TMPL_TEXT range>[8]
+<tr><td>[[files repository ]]<td><TMPL_TEXT repository>[9]
+<tr><td>[[max files size]]<td><TMPL_TEXT max_file_size>[10]
+<tr><td>[[refresh timeout]]<td><TMPL_TEXT timeout>[11]
+<tr><td colspan="2"><input name="submit" type="submit" value="[[apply]]">
+</table>
+</TMPL_LOOP>
+</form>
+<table class="tickets">
+<tr><td>
+[1] [[Required]]<br/>
+[2] [[fr_FR, en_US, etc.]]<br/>
+[3] [[ISO-8859-1, UTF-8, etc.]]<br/>
+[4] [[Required only if contact database is ldap]]<br/>
+[5] [[May be useful on day]]<br/>
+[6] [[The mail account where will look for tickets (see INSTALL)]]<br/>
+[7] [[Must be an absolute path on the server]]<br/>
+[8] [[Number of tickets/customers/contracts shown in on page]]<br/>
+[9] [[Must be an absolute path on the server]]<br/>
+[10] [[Max upload size for files (in kb)]]<br/>
+[11] [[The time a view page will wait before refresh (in seconds)]]<br/>
+</td></tr>
+</table>
+<TMPL_INCLUDE NAME="footer.html">

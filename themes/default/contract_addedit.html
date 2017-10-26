@@ -1,0 +1,93 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<form name="contract" method="post" action="index.php?whattodo=addcontract">
+<table class="tickets" id="contracts">
+<TMPL_IF contractid>
+	<tr><td>[[customer]]<td><TMPL_VAR customer_name>
+<TMPL_LOOP contract>
+	<tr><td>[[number]]<td><TMPL_TEXT number>
+	<tr><td>[[start date]]<td><TMPL_TEXT start_date>
+	<a href="#" onClick="cal.select(document.contract.start_date,'anchor1','dd/MM/yyyy'); return false;" TITLE="cal1.select(document.contract.start_date,'anchor1','dd/MM/yyyy'); return false;" NAME="anchor1" ID="anchor1">
+		<img src="<TMPL_VAR theme_url>/images/b_calendar.png" width="16" height="16" border="0" alt="[[Click Here to Pick up the date]]">
+	</a>
+	<tr><td>[[delivery address]]<td><textarea name="delivery_address"><TMPL_VAR delivery_address></textarea>
+	<tr><td>[[facturation]]<td><TMPL_TEXT facturation>
+	<tr><td>[[payment]]<td><TMPL_TEXT payment>
+	<tr><td>[[comments]]<td><textarea name="comments"><TMPL_VAR comments></textarea>
+	<tr><td>[[partner software]]<td><TMPL_TEXT partner_soft>
+	<tr><td>[[partner software contract]]<td><TMPL_TEXT partner_soft_contract>
+	<tr><td>[[partner hardware]]<td><TMPL_TEXT partner_hard>
+	<tr><td>[[partner hardware contract]]<td><TMPL_TEXT partner_hard_contract>
+	<tr><td>[[logo]]<td><TMPL_VAR logo>
+</TMPL_LOOP>
+<TMPL_ELSE>
+<tr><td>[[customer]]<td>
+	<select name="cid" OnChange="update_contract()">
+			<option selected value="<TMPL_VAR cid>"><TMPL_VAR customer_name></option>
+			<TMPL_LOOP customerslist>
+			<option value="<TMPL_VAR id>"><TMPL_VAR name></option>
+			</TMPL_LOOP>
+	<tr><td>[[number]]<td><TMPL_TEXT number>
+	<tr><td>[[start date]]<td>
+	<TMPL_TEXT start_date | size='10'>
+	<a href="#" onClick="cal.select(document.contract.start_date,'anchor1','dd/MM/yyyy'); return false;" TITLE="cal1.select(document.contract.start_date,'anchor1','dd/MM/yyyy'); return false;" NAME="anchor1" ID="anchor1">
+		<img src="<TMPL_VAR theme_url>/images/b_calendar.png" width="16" height="16" border="0" alt="[[Click Here to Pick up the date]]">
+	</a>
+	<tr><td>[[delivery address]]<td><textarea name="delivery_address"><TMPL_VAR delivery_address></textarea>
+	<tr><td>[[facturation]]<td><TMPL_TEXT facturation>
+	<tr><td>[[payment]]<td><TMPL_TEXT payment>
+	<tr><td>[[comments]]<td><textarea name="comments"><TMPL_VAR comments></textarea>
+	<tr><td>[[logo]]<td><TMPL_VAR logo>
+	</select>
+	
+</TMPL_IF>
+	<tr><td>[[administrative contact]]<td>
+		<select name="administrative_contact">
+			<option selected value="<TMPL_VAR administrative_contact>"><TMPL_VAR administrative_contact_firstname> <TMPL_VAR administrative_contact_lastname></option>
+			<TMPL_LOOP contactslist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	<tr><td>[[technical contact]]<td>
+		<select name="technical_contact">
+			<option selected value="<TMPL_VAR technical_contact>"><TMPL_VAR technical_contact_firstname> <TMPL_VAR technical_contact_lastname></option>
+			<TMPL_LOOP contactslist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	<tr><td>[[IC]]<td>
+		<select name="IC">
+			<option selected value="<TMPL_VAR IC>"><TMPL_VAR IC_firstname> <TMPL_VAR IC_lastname></option>
+			<TMPL_LOOP iclist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	<tr><td>[[ITC]]<td>
+		<select name="ITC">
+			<option selected value="<TMPL_VAR ITC>"><TMPL_VAR ITC_firstname> <TMPL_VAR ITC_lastname></option>
+			<TMPL_LOOP itclist>
+			<option value="<TMPL_VAR uid>"><TMPL_VAR firstname> <TMPL_VAR lastname></option>
+			</TMPL_LOOP>
+		</select>
+		<a href=javascript:OpenNew("index.php?whattodo=addcontact&taskbar=no&cid=<TMPL_VAR cid>")>[[add contact]]</a>
+	<tr><td>[[agency]]<td>
+		<select name="agency">
+			<option selected value="<TMPL_VAR agency_id>"><TMPL_VAR agency_name></option>
+			<TMPL_LOOP agencylist>
+			<option value="<TMPL_VAR id>"><TMPL_VAR name></option>
+			</TMPL_LOOP>
+
+	<TMPL_IF contractid>
+	<tr><td colspan="2"><input name="submit" type="submit" value="[[apply]]">
+	<TMPL_ELSE>
+	<tr><td colspan="2"><input name="submit" type="submit" value="[[add]]">
+	</TMPL_IF>
+	<input name="id" type="hidden" value="<TMPL_VAR contractid>">
+</table>
+
+</form>
+
+<TMPL_INCLUDE NAME="footer.html">

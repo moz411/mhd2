@@ -1,0 +1,86 @@
+<TMPL_IF taskbar>
+<TMPL_LOOP menu>
+<ul id="nav">
+<TMPL_IF viewjobs>
+	<li class="pict"><a href="index.php?whattodo=viewjobs">[[Tickets]]</a>
+		<ul>
+			<TMPL_IF addjob>
+			<li><a href="index.php?whattodo=addjob">[[add ticket]]</a></li>
+			</TMPL_IF>
+		</ul>
+	</li>
+</TMPL_IF>
+<TMPL_IF viewcustomers>
+	<li class="pict"><a href="index.php?whattodo=viewcustomers">[[Customers]]</a>
+		<ul>
+			<TMPL_IF addcustomer>
+			<li><a href="index.php?whattodo=addcustomer">[[add customer]]</a></li>
+			</TMPL_IF>
+		</ul>
+	</li>
+</TMPL_IF>
+<TMPL_IF viewcontracts>
+	<li class="pict"><a href="index.php?whattodo=viewcontracts">[[Contracts]]</a>
+		<ul>
+			<TMPL_IF addcontract>
+			<li><a href="index.php?whattodo=addcontract">[[add contract]]</a></li>
+			</TMPL_IF>
+		</ul>
+	</li>
+</TMPL_IF>
+<TMPL_IF viewcontacts>
+	<li class="pict"><a href="index.php?whattodo=viewcontacts">[[Contacts]]</a>
+		<ul>
+			<TMPL_IF addcontact>
+			<li><a href="index.php?whattodo=addcontact">[[add contact]]</a></li>
+			</TMPL_IF>
+		</ul>
+	</li>
+</TMPL_IF>
+<TMPL_IF booking>
+	<li class="pict"><a href="index.php?whattodo=booking">[[Booking]]</a></li>
+</TMPL_IF>
+<TMPL_IF viewdocs>
+	<li class="pict"><a href="docs/TODO_CALLS.html" target="_blank">[[Docs]]</a></li>
+</TMPL_IF>
+<TMPL_IF stats>
+	<li class="pict"><a href="index.php?whattodo=stats">[[Statistics]]</a></li>
+</TMPL_IF>
+<TMPL_IF config>
+	<li class="pict"><a href="index.php?whattodo=config">[[Configuration]]</a>
+		<ul>
+			<TMPL_IF users>
+			<li><a href="index.php?whattodo=users">[[users]]</a></li>
+			</TMPL_IF>
+			<TMPL_IF groups>
+			<li><a href="index.php?whattodo=groups">[[groups]]</a></li>
+			</TMPL_IF>
+		</ul>
+	</li>
+</TMPL_IF>
+<TMPL_IF search>
+	<li class="pict"><a href="index.php?whattodo=search">[[Search]]</a></li>
+</TMPL_IF>
+<TMPL_IF logout>
+	<li class="pict"><a href="index.php?whattodo=logout">[[Logout]]</a></li>
+</TMPL_IF>
+<TMPL_IF viewjobs>
+	<li class="search">
+		<form method=GET>
+			<input type="hidden" name="whattodo" value="viewjobs">
+		# <input type="text" class="searchbutton" size="3" name="tid" value="" OnChange="submit()" OnFocus="value=''">
+		</form>
+	</li>
+</TMPL_IF>
+<TMPL_IF search>
+	<li class="search">
+		<form action="index.php?whattodo=search" method="POST">
+			<input type="hidden" name="table" value="tickets">
+			<input type="hidden" name="column" value="summary">
+			<input type="text" class="searchbutton" size="15" name="string" value="[[Search]]" OnChange="submit()" OnFocus="value=''">
+		</form>
+	</li>
+</TMPL_IF>
+</ul>
+</TMPL_LOOP>
+</TMPL_IF>

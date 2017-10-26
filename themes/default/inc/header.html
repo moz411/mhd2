@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="<TMPL_VAR encoding>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta HTTP-EQUIV="content-type" CONTENT="text/html;charset=<TMPL_VAR encoding>">
+		<TMPL_IF timeout>
+		<META HTTP-EQUIV="Refresh" CONTENT="<TMPL_VAR timeout>">
+		</TMPL_IF>
+		<link rel="stylesheet" type="text/css" media="screen" href="<TMPL_VAR theme_url>/mhd2.css" />
+		<title><TMPL_VAR title></title>
+		<META HTTP-EQUIV="Expires" CONTENT="0">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+
+<script language="JavaScript" src="include/functions.js"></script> 
+<script language="JavaScript" src="libraries/CalendarPopup.js"></script>
+
+</head>
+<TMPL_IF close>
+<BODY onLoad="changeparent()">
+</TMPL_IF>
+
+<TMPL_IF taskbar>
+	<body>
+	<div id="centre">
+	<TMPL_INCLUDE NAME="menu.html">
+	<br /><br /><br />
+	<TMPL_LOOP links>
+		<a href="<TMPL_VAR link ESCAPE="NONE">"><TMPL_VAR title></a>
+	</TMPL_LOOP>
+	
+<TMPL_ELSE>
+	<BODY onLoad="fitWindowSize()">
+</TMPL_IF>

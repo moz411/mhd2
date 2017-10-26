@@ -1,0 +1,173 @@
+body {
+	margin:20px 20px 20px 20px;
+	border-style: groove;
+	background-color: "#ffffff";
+	padding: 0;
+	margin: 10;
+	text-align: center;
+	font-size: 11px;
+	/*font-family: Arial, Helvetica, serif ;*/
+	font-family: Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif
+}
+
+dt, dl, dd, ul, li {
+list-style-type: none;
+margin: 0 10px 0 0;
+padding: 0;
+}
+
+table {
+	margin-left:auto; 
+	margin-right:auto;
+	position: relative;
+	}
+
+/* Form Elements */
+
+input {
+	border: 1px #999 solid;
+	padding: 1px;
+	background: #fff;
+	font: 11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #c60 }
+
+textarea {
+	border: 1px #666 solid;
+	background: #fff;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #c60;
+	width: 95%;
+	}
+	
+select {
+	border: 1px #666 solid;
+	background: #fff;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #333 }
+
+form { display:inline }
+
+	
+table.tickets {
+	table-layout: outline;
+	margin-left:auto; 
+	margin-right:auto;
+	background-color: #f4f4f4;
+	border: outset 5pt;
+	padding: 0;
+	border-spacing: 5pt;
+	width: 90%;
+	position: relative;
+	}
+	
+table.tickets * th {
+	background-color: #efefef;
+	border: outset 1px;
+	color: #c60;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	}
+	
+table.tickets * td:first-child {
+	background-color: #efefef;
+	border: outset 1px;
+	color: #c60;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	}
+	
+table.tickets * td {
+	border: inset 1px;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+ 	padding: 1px;
+	}	
+	
+table.events {
+	table-layout: outline;
+	margin-left:auto; 
+	margin-right:auto;
+	background-color: #f4f4f4;
+	border: outset 5pt;
+	padding: 0;
+	border-spacing: 5pt;
+	width: 90%;
+	position: relative;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+	
+table.events * th {
+	background-color: #efefef;
+	border: outset 1px;
+	color: #c60;
+	font-weight: bold;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+	
+table.events * td {
+	border: inset 1px;
+	font-size: 10px;
+ 	padding: 1px;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+
+item.tr {
+	background-color: #efefef;
+	font:11px Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+ 	color: #333;
+ 	padding: 1px }
+
+a { color: #c60; text-decoration:none} 
+a:hover { color: #c60; text-decoration: none; background-color: #369 }
+/*a:visited { color: #FFFFFF; background-color: #369;}*/
+a:visited { color: #c60; text-decoration:none} 
+
+/* text-decoration: underline; background-color: transparent }*/
+
+a.sort { color: #666; text-decoration: underline }
+a.sort:hover { color: #000; text-decoration: underline; background-color: transparent }
+
+a.topnav { color: #c60; text-decoration: none }
+a.topnav:hover { color: #c60; text-decoration: none; background-color: transparent }
+a.topnav:visited { color: #c60; text-decoration: none }
+/* a.topnav:visited { color: #ccc; text-decoration: none } */
+
+a.tab { color: #666; text-decoration: none }
+a.tab:hover { color: #000; text-decoration: none; background-color: transparent }
+
+a.bigsort { color: #c60; text-decoration: none }
+a.bigsort:hover { color: #c60; text-decoration: underline; background-color: transparent }
+/* ; cursor: help } */
+
+a.tip { color: #666; text-decoration: none }
+a.tip:hover { color: #369; text-decoration: underline; background-color: transparent }
+/*; cursor: help }*/
+
+.m0l0o {
+	text-decoration: none;
+	margin: 0px;
+	border: 1px solid #ffffff;
+	border-style: groove;
+	border: outset 1pt; 
+}
+
+.m0l1o {
+	text-decoration: none;
+	margin: 0px;
+	border: 1px solid #ffffff;
+	border-style: groove;
+	border: outset 1pt; 
+}
+
+.m0l0i {
+	padding: 2px;
+	text-decoration: none;
+	font-family: Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.m0l1i {
+	padding: 2px;
+	text-decoration: none;
+	font-family: Trebuchet MS, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}

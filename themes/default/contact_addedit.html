@@ -1,0 +1,38 @@
+<TMPL_INCLUDE NAME="header.html">
+
+<TMPL_IF taskbar>
+<form name="contact" method="post" action="index.php?whattodo=addcontact">
+<TMPL_ELSE>
+<form name="contact" method="post" action="index.php?whattodo=addcontact&close=yes">
+</TMPL_IF>
+<table class="tickets">
+<tr><td>[[firstname]]<td><TMPL_TEXT firstname>
+<tr><td>[[lastname]]<td><TMPL_TEXT lastname>
+<tr><td>[[customer]]<td>
+<TMPL_IF taskbar>
+	<select name="cid">
+		<option selected value="<TMPL_VAR customer_id>"><TMPL_VAR customer_name></option>
+		<TMPL_LOOP customerslist>
+		<option value="<TMPL_VAR id>"><TMPL_VAR name></option>
+		</TMPL_LOOP>
+	</select>
+<TMPL_ELSE>
+<input name="cid" type="hidden" value="<TMPL_VAR customer_id>"><TMPL_VAR customer_name>
+</TMPL_IF>
+<tr><td>[[phone]]<td><TMPL_TEXT phone>
+<tr><td>[[email]]<td><TMPL_TEXT email>
+<tr><td>[[fax]]<td><TMPL_TEXT fax>	
+<tr><td>[[address]]<td><TMPL_TEXT address>
+<tr><td>[[job]]<td><TMPL_TEXT job>
+
+<TMPL_IF uid>
+<tr><td colspan="2"><input name="submit" type="submit" value="[[apply]]">
+<TMPL_ELSE>
+<tr><td colspan="2"><input name="submit" type="submit" value="[[add]]">
+</TMPL_IF>
+<input name="uid" type="hidden" value="<TMPL_VAR uid>">
+</table>
+
+</form>
+
+<TMPL_INCLUDE NAME="footer.html">

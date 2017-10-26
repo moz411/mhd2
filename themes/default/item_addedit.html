@@ -1,0 +1,53 @@
+<TMPL_INCLUDE NAME="header.html">
+
+
+<form name="edititem" method="post" action="index.php?whattodo=additem&close=no">
+<table class="events">	
+<th colspan="11"><TMPL_VAR title>
+	<tr>
+		<td>[[PN]]
+		<td>[[SN]]
+		<td>[[hostid]]
+		<td>[[designation]]
+		<td>[[quantity]]
+		<td>[[low_cost]]
+		<td>[[high_cost]]
+		<td>[[renewal]]
+		<td>[[duration]]
+		([[months]])
+		<td>[[answer time]]
+		<td>[[answer type]]
+	</tr>
+<TMPL_LOOP item>
+	<tr>
+		<td><TMPL_TEXT pn | size="20">
+		<td><TMPL_TEXT sn | size="20">
+		<td><TMPL_TEXT hostid | size="8">
+		<td><TMPL_TEXT designation | size="50">
+		<td><TMPL_TEXT quantity | size="6">
+		<td><TMPL_TEXT low_cost | size="6">
+		<td><TMPL_TEXT high_cost | size="6">
+		<td><TMPL_TEXT renewal | size="6">
+		<a href="#" onClick="cal.select(document.edititem.renewal,'anchor1','dd/MM/yyyy'); return false;" TITLE="cal1.select(document.edititem.renewal,'anchor1','dd/MM/yyyy'); return false;" NAME="anchor1" ID="anchor1">
+		<img src="<TMPL_VAR theme_url>/images/b_calendar.png" width="16" height="16" border="0" alt="[[Click Here to Pick up the date]]">
+		</a>
+		<td><TMPL_TEXT duration | size="6">
+		<td>
+		<select name="answer_time">
+			<option selected value="<TMPL_VAR answer_time>"><TMPL_VAR answer_time></option>
+			<option value="4h">4h</option>
+			<option value="8h">8h</option>
+			<option value="12h">12h</option>
+			<option value="JOS">JOS</option>
+		</select>
+		<td><TMPL_TEXT answer_type | size="6">
+		<td><input name="submit" type="submit" value="[[apply]]">
+	</tr>
+	<input name="contractid" type="hidden" value="<TMPL_VAR contractid>">
+	<input name="type" type="hidden" value="<TMPL_VAR type>">
+	<input name="id" type="hidden" value="<TMPL_VAR id>">
+</TMPL_LOOP>
+</table>
+</form>
+
+<TMPL_INCLUDE NAME="footer.html">
